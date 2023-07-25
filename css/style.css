@@ -1,5 +1,10 @@
 *{
-    box-sizing: border-box;
+    box-sizing: border-box;   
+    
+}
+
+h1{
+    font-family: 'Montserrat' ;
 }
 
 
@@ -16,20 +21,21 @@
 .header{
     border-bottom: 1px solid rgb(182, 182, 182);
     padding: 0.5em;
-    
 }
 
 .logo{
     display: flex;
     gap:10px;
-    margin-left: 1em;
+    margin-left: 1em;    
     
 }
 
 .parrafo-logo{
     font-family:Arial, Helvetica, sans-serif;
     font-weight: bold;
-    color: blue;
+    color: blue;    
+    margin-bottom: 0;
+    font-size: 1.4rem;
 }
 
 .parrafo-logo > span{
@@ -40,16 +46,15 @@
 h1{
     text-align: center;
     color:rgb(85, 85, 85);
-}
-
-.main{
-    
-    background-color:#eeeeee;
+    margin-top: 0;
 }
 
 .primer-tramo{
-    margin-left: 1em;
-    margin-right: 1em;
+    background-color:#eeeeee;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    padding-top: 1em;
 }
 
 .tips{
@@ -60,4 +65,59 @@ h1{
 .p-tips{
     margin: 0;
     font-family: 'Poppins';
+    font-size: 0.9rem;
+}
+
+.segundo-tramo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    color:rgb(85, 85, 85); 
+    border-bottom: 1px solid rgb(85, 85, 85);   
+}
+
+.segundo-tramo > h2{
+    font-size: 1.2rem;
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+
+.fotos{
+    transform: scale(0.9);    
+}
+
+.ultimo-parrafo-article{
+    margin-bottom: 0;
+}
+
+.footer{
+    background-color:#12322B;
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    text-align: start;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.footer > div{
+    margin-bottom: 3em;
+}
+
+.link-formulario{
+    color:aqua;
+    text-decoration: none;
+}
+
+.iconos-redes > a > img{
+    transform: scale(0.7);
+}
+
+.copyright{
+    text-align: center;
+    border-top: 1px solid #FFF;
+
 }
