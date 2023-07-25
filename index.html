@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Belanosima&family=Poppins:wght@300;400&display=swap">
         <link href="https://fonts.googleapis.com/css2?family=Belanosima&family=Montserrat&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
         <link rel="stylesheet" href="./css/style.css">
         <title>Página principal</title>
     </head>
@@ -16,9 +17,20 @@
     <body class="contenedor-grid">
         <header class="header">
             <div class="logo">
-                <img src="./img/logo.png" alt="logo" width="25%">
-                <p class="parrafo-logo">PADAAR <span>Salud</span></p>
-            </div>
+                <img src="./img/logo.png" alt="logo" width="35%">
+                <p class="parrafo-logo">PADAAR <br><span>Salud</span></p>
+            </div>            
+            <button class="boton-abrir" id="boton-abrir"><i class="bi bi-list"></i></button>            
+            <nav class="nav" id="nav">
+                <button class="boton-cerrar" id="boton-cerrar"><i class="bi bi-x"></i></button>
+                <ul class="nav-list">
+                    <li><a href="#">Iniciar sesión</a></li>
+                    <li><a href="#nosotros">Quiénes somos</a></li>
+                    <li><a href="#">Indice de masa corporal</a></li>
+                    <li><a href="#">Tasa metabólica basal</a></li>
+                    <li><a href="#">Calorías de las comidas</a></li>
+                </ul>
+            </nav>
         </header>
 
         <main class="main">
@@ -58,7 +70,7 @@
         </main>
 
         <footer class="footer">
-            <div class="nosotros">
+            <div class="nosotros" id="nosotros">
                 <h3>Sobre nosotros</h3>
                 <p><strong>PADAAR Salud</strong> es una página puramente creada por Pablo Araoz.</p>
                 <p>Fue originalmente diseñada para controlar el peso y las calorías a consumier.</p>
@@ -84,5 +96,6 @@
                 <p class="p-copyright">Pablo Araoz © 2023 - Todos los derechos reservados</p>
             </div>
         </footer>
+        <script src="./js/main.js"></script>
     </body>
 </html>

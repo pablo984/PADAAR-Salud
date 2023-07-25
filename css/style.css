@@ -1,33 +1,31 @@
 *{
-    box-sizing: border-box;   
-    
+    box-sizing: border-box; 
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 h1{
     font-family: 'Montserrat' ;
 }
 
-
-.contenedor-grid{
-    display: grid;
+body{
     margin:0;
-    grid-template:
-    "header" auto
-    "nav" auto
-    "main" auto
-    "footer" auto; 
 }
 
 .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-bottom: 1px solid rgb(182, 182, 182);
-    padding: 0.5em;
+    padding: 1em;
 }
 
 .logo{
     display: flex;
-    gap:10px;
-    margin-left: 1em;    
-    
+    align-items: center;
+    column-gap: 0.7em;    
 }
 
 .parrafo-logo{
@@ -49,12 +47,57 @@ h1{
     margin-top: 0;
 }
 
+.nav{
+    opacity: 0;
+    visibility: hidden; /*Oculta el menú con los links*/
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position:absolute; /*Hace que cada link ocupe todo el ancho*/
+    right: 0; /*Tiene que ver con position*/
+    top:0; /*Tiene que ver con position*/
+    padding-top: 2.3em;
+    padding-right: 1em;
+    background-color:#12322B;
+}
+
+.nav-list{
+    display: flex;
+    flex-direction: column; /*Un link debajo del otro*/
+    align-items: end; 
+    list-style-type: none; /*Quita las viñetas*/
+    gap: 1rem;
+}
+
+.nav-list > li > a{
+    text-decoration: none; /*Quita el subrayado*/
+    color:#FFF;
+    font-family: sans-serif;
+}
+
+/*Al colocar un PUNTO, hacemos que se agregue una clase nueva, 
+en este caso, "visible". Lo que contenga la nueva clase va a 
+sobreescribir lo que se haya configurado en su clase original, 
+pero lo que se configuró y no se sobreescribe, se mantiene tal
+cual: */
+.nav.visible{
+    opacity: 1;
+    visibility: visible; /*Desoculta el menú con los links*/
+}
+
+.boton-abrir, .boton-cerrar{
+    border:0; /*Quita la línea negra del borde*/
+    font-size: 1.6em; /*Agranda el botón*/
+    background-color: transparent;
+}
+
+.boton-cerrar{
+    color: #FFF;
+}
+
 .primer-tramo{
     background-color:#eeeeee;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-bottom: 1em;
-    padding-top: 1em;
+    padding: 1em;
 }
 
 .tips{
@@ -72,8 +115,7 @@ h1{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding: 1em;
     text-align: center;
     color:rgb(85, 85, 85); 
     border-bottom: 1px solid rgb(85, 85, 85);   
@@ -81,7 +123,6 @@ h1{
 
 .segundo-tramo > h2{
     font-size: 1.2rem;
-    margin-top: 1em;
     margin-bottom: 0;
 }
 
@@ -99,8 +140,7 @@ h1{
     font-family: 'Montserrat', sans-serif;
     font-size: 0.8rem;
     text-align: start;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding: 1em;
 }
 
 .footer > div{
@@ -113,7 +153,7 @@ h1{
 }
 
 .iconos-redes > a > img{
-    transform: scale(0.7);
+    transform: scale(0.6);
 }
 
 .copyright{
