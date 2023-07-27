@@ -8,6 +8,16 @@ html{
 
 h1{
     font-family: 'Montserrat' ;
+    text-align: center;
+    color:rgb(85, 85, 85);
+    margin-top: 0;
+}
+
+h2{
+    font-family: 'Montserrat';
+    color: rgb(85, 85, 85);
+    /* font-size: 1.2rem; */
+    text-align: center;
 }
 
 body{
@@ -22,34 +32,9 @@ body{
     padding: 1em;
 }
 
-.logo{
-    display: flex;
-    align-items: center;
-    column-gap: 0.7em;    
-}
-
-.parrafo-logo{
-    font-family:Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    color: blue;    
-    margin-bottom: 0;
-    font-size: 1.4rem;
-}
-
-.parrafo-logo > span{
-    font-style: italic;
-    color:green;
-}
-
-h1{
-    text-align: center;
-    color:rgb(85, 85, 85);
-    margin-top: 0;
-}
-
 .nav{
     opacity: 0;
-    visibility: hidden; /*Oculta el menú con los links*/
+    visibility: hidden; /*Oculta el menú con los links hasta los 800px*/
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -58,7 +43,7 @@ h1{
     top:0; /*Tiene que ver con position*/
     padding-top: 2.3em;
     padding-right: 1em;
-    background-color:#12322B;
+    background-color:#12322B;    
 }
 
 .nav-list{
@@ -71,7 +56,7 @@ h1{
 
 .nav-list > li > a{
     text-decoration: none; /*Quita el subrayado*/
-    color:#FFF;
+    color: aqua;
     font-family: sans-serif;
 }
 
@@ -97,12 +82,15 @@ cual: */
 
 .primer-tramo{
     background-color:#eeeeee;
-    padding: 1em;
+    padding: 2em;
+    color:rgb(85, 85, 85);
 }
 
 .tips{
     display: flex;
     text-align: center;
+    border-bottom: 1px solid #5e5e5e;
+    padding-bottom: 2em;
 }
 
 .p-tips{
@@ -111,27 +99,35 @@ cual: */
     font-size: 0.9rem;
 }
 
+figcaption{
+    text-align: center;
+    font-family: 'Montserrat';
+    margin-bottom: 2.5em;
+}
+
+.p-testimonios{
+    font-family: 'Poppins';
+    text-align: justify;
+}
+
+.primera-foto{
+    margin-bottom: 5em;
+}
+
 .segundo-tramo{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1em;
+    padding: 2em;
     text-align: center;
     color:rgb(85, 85, 85); 
     border-bottom: 1px solid rgb(85, 85, 85);   
 }
 
-.segundo-tramo > h2{
-    font-size: 1.2rem;
-    margin-bottom: 0;
-}
-
-.fotos{
-    transform: scale(0.9);    
-}
-
 .ultimo-parrafo-article{
     margin-bottom: 0;
+    font-family: 'Poppins';
+    text-align: justify;
 }
 
 .footer{
@@ -145,11 +141,29 @@ cual: */
 
 .footer > div{
     margin-bottom: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .link-formulario{
     color:aqua;
     text-decoration: none;
+}
+
+.contactos{
+    margin-bottom: 1em;
+}
+
+.contactos > i{
+    font-size: 1rem;
+    font-family: 'Montserrat';
+    font-style: normal;  
+}
+
+.contactos > a{
+    text-decoration: none;  
+    color:aqua;
+    margin-left: 0.5em;
 }
 
 .iconos-redes > a > img{
@@ -159,5 +173,4 @@ cual: */
 .copyright{
     text-align: center;
     border-top: 1px solid #FFF;
-
 }
