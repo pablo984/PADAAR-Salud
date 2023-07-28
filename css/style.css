@@ -11,6 +11,7 @@ h1{
     text-align: center;
     color:rgb(85, 85, 85);
     margin-top: 0;
+    margin-bottom: 2em;
 }
 
 h2{
@@ -32,6 +33,10 @@ body{
     padding: 1em;
 }
 
+.logo{
+    max-width: 368px;
+}
+
 .nav{
     opacity: 0;
     visibility: hidden; /*Oculta el menú con los links hasta los 800px*/
@@ -43,7 +48,7 @@ body{
     top:0; /*Tiene que ver con position*/
     padding-top: 2.3em;
     padding-right: 1em;
-    background-color:#12322B;    
+    background-color:#12322B;       
 }
 
 .nav-list{
@@ -57,7 +62,7 @@ body{
 .nav-list > li > a{
     text-decoration: none; /*Quita el subrayado*/
     color: aqua;
-    font-family: sans-serif;
+    font-family: sans-serif;    
 }
 
 /*Al colocar un PUNTO, hacemos que se agregue una clase nueva, 
@@ -89,8 +94,9 @@ cual: */
 .tips{
     display: flex;
     text-align: center;
+    justify-content: center;
     border-bottom: 1px solid #5e5e5e;
-    padding-bottom: 2em;
+    padding-bottom: 3em;
 }
 
 .p-tips{
@@ -102,7 +108,7 @@ cual: */
 figcaption{
     text-align: center;
     font-family: 'Montserrat';
-    margin-bottom: 2.5em;
+    
 }
 
 .p-testimonios{
@@ -110,8 +116,8 @@ figcaption{
     text-align: justify;
 }
 
-.primera-foto{
-    margin-bottom: 5em;
+.primera-imagen{
+    margin-bottom: 3em;
 }
 
 .segundo-tramo{
@@ -122,6 +128,10 @@ figcaption{
     text-align: center;
     color:rgb(85, 85, 85); 
     border-bottom: 1px solid rgb(85, 85, 85);   
+}
+
+.p-oculto{
+    display: none;
 }
 
 .ultimo-parrafo-article{
@@ -137,12 +147,6 @@ figcaption{
     font-size: 0.8rem;
     text-align: start;
     padding: 1em;
-}
-
-.footer > div{
-    margin-bottom: 3em;
-    padding-left: 1em;
-    padding-right: 1em;
 }
 
 .link-formulario{
@@ -173,4 +177,229 @@ figcaption{
 .copyright{
     text-align: center;
     border-top: 1px solid #FFF;
+}
+
+@media screen and (min-width:768px){
+    .header{
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+
+    .primer-tramo, .segundo-tramo{
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+
+    .testimonios{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+    }
+
+    .descubri{
+        display: grid;
+        grid-template-columns: 1fr 1fr;         
+        gap: 30px;
+    }
+
+    .descubri-1 > img{
+        max-width: 81%;
+    }
+
+    .descubri-2 > img{
+        max-width: 99%; 
+    }
+
+    .descubri-3 > img{
+        max-width: 80%;
+    }
+
+    .p-testimonios.media{
+        text-align: center;
+    }
+
+    .ultimo-parrafo-article.media{
+        text-align: center;
+    }
+
+    .p-oculto{
+        display: block;
+        font-family: 'Poppins';
+        margin: 0;
+        text-align: center;
+    }
+
+    .footer{
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+
+    .grid-contacto{
+        display: grid;
+        grid-template-columns: 23% 23% 33%;
+        justify-content: space-between; 
+    }
+
+    .redes-sociales{
+        margin-top: 1em;
+        margin-bottom: 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    h1{
+        font-size: 2.5rem;
+    }
+
+    h2{
+        font-size: 2.5rem;
+    }
+
+    .header{
+        padding-left: 10em;
+        padding-right: 10em;
+    }
+
+    .boton-abrir{
+        display: none;
+    }
+
+    .boton-cerrar{
+        display: none;
+    }
+
+    .nav{
+        opacity: 1;
+        visibility: visible;
+        flex-direction: row;
+        position:static;
+        background-color:transparent;
+    }
+
+    .nav-list{
+        flex-direction: row; /*Un link debajo del otro*/
+        align-items: end; 
+    }
+
+    .nav-list > li > a{
+        color: blue;
+        font-size: 0.9rem;
+    }
+
+    .imc{
+        display: none;
+    }
+
+    .tmb{
+        display: none;
+    }
+
+    .calorias{
+        display: none;
+    }
+
+    .testimonios{
+        justify-items: center;
+        gap:0;
+    }
+
+    .primera-imagen, .segunda-imagen{
+        width: 70%;
+    }
+
+    .primera-imagen > img{        
+        transform: scale(0.8);
+        filter: grayscale(80%); 
+        transition: 1s; 
+    }
+
+    .primera-imagen > img:hover{
+        transform: scale(1);
+        filter: grayscale(0%);
+        transition: 1s;
+    }
+
+    .segunda-imagen > img{
+        transform: scale(0.8);
+        filter: grayscale(80%); 
+        transition: 1s; 
+    }
+
+    .segunda-imagen > img:hover{
+        transform: scale(1);
+        filter: grayscale(0%);
+        transition: 1s;
+    }
+
+    .primera-imagen > p{
+        font-size: 1rem;
+    }
+
+    .segunda-imagen > p{
+        font-size: 1rem;
+    }
+
+    h3{
+        font-size: 1.5rem;
+    }
+
+    .primer-tramo, .segundo-tramo{
+        padding-left: 12em;
+        padding-right: 12em;
+        
+    }
+
+    .segundo-tramo{
+        align-items: center;
+    }
+
+    .segundo-tramo > h2{
+        margin-bottom: 2em;
+    }
+
+    .segundo-tramo > article > div > p{
+        font-size: 1.2rem;
+    }
+
+    .descubri{
+        width: 70%;
+    }
+
+    .footer{
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+
+    .grid-contacto{
+        display: flex;
+        gap: 30px;
+        justify-content: space-evenly;
+        
+    }
+
+    .nosotros{
+        flex-shrink: 5;
+    }
+
+    .sugerencias{
+        flex-shrink: 4;
+    }
+
+    .mapa{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mapa > h3{
+        text-align: center;
+    }
+
+    .mapa > iframe{
+        max-width: 60%;
+        text-align: center;
+    }
 }
