@@ -25,6 +25,10 @@ body{
     margin:0;
 }
 
+.carrusel{
+    display: none;
+}
+
 .header{
     display: flex;
     align-items: center;
@@ -180,6 +184,14 @@ figcaption{
 }
 
 @media screen and (min-width:768px){
+    .carrusel{
+        display: block;
+    }
+
+    .carousel-inner{
+        max-height: 25em;        
+    }
+
     .header{
         padding-left: 4em;
         padding-right: 4em;
@@ -250,6 +262,14 @@ figcaption{
 }
 
 @media screen and (min-width:1024px) {
+    .carrusel{
+        display: block;
+    }
+
+    .carousel-inner{
+        max-height: 35em;        
+    }
+
     h1{
         font-size: 2.5rem;
     }
