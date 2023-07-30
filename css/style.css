@@ -1,5 +1,5 @@
 *{
-    box-sizing: border-box; 
+    box-sizing: border-box;     
 }
 
 html{
@@ -33,61 +33,118 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    top: 0;
     border-bottom: 1px solid rgb(182, 182, 182);
     padding: 1em;
 }
 
 .logo{
-    max-width: 368px;
+    max-width: 200px;
+    z-index: 3;
+}
+
+.container-menu{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100vh;
+    top:0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 500ms ease;
+}
+
+/*--------------------ATENCIÓN--------------------: 
+Las páginas web tienen un límite a la izquierda, pero 
+no tienen límite a la derecha. Es por eso que cuando quería
+que el "contenido-menu" aparezca barrido de derecha a izquierda
+dejaba un HUECO que era donde se "escondía" con el 
+"transform: translateX(100%)". En cambio cuando lo ubico a la 
+izquierda, ese problema no lo tiene porque el lado izquierdo de la
+página tiene un límite, y no genera ningún HUECO. 
+*/
+.contenido-menu{
+    position: absolute;
+    width: 100%;
+    max-width: 235px;
+    top:0;
+    left: 0;    
+    background-color: #12322B;;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: all 500ms ease;
+    z-index: 2;
 }
 
 .nav{
-    opacity: 0;
-    visibility: hidden; /*Oculta el menú con los links hasta los 800px*/
     display: flex;
-    flex-direction: column;
-    align-items: end;
-    position:absolute; /*Hace que cada link ocupe todo el ancho*/
-    right: 0; /*Tiene que ver con position*/
-    top:0; /*Tiene que ver con position*/
-    padding-top: 2.3em;
-    padding-right: 1em;
-    background-color:#12322B;       
+    flex-direction: column;    
+    gap: 2em;
+    padding-left: 1em;
+    transform: translateY(50%); /*Altura de los links con respecto al header*/
 }
 
-.nav-list{
-    display: flex;
-    flex-direction: column; /*Un link debajo del otro*/
-    align-items: end; 
-    list-style-type: none; /*Quita las viñetas*/
-    gap: 1rem;
-}
-
-.nav-list > li > a{
-    text-decoration: none; /*Quita el subrayado*/
+.nav > a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
     color: aqua;
-    font-family: sans-serif;    
 }
 
-/*Al colocar un PUNTO, hacemos que se agregue una clase nueva, 
-en este caso, "visible". Lo que contenga la nueva clase va a 
-sobreescribir lo que se haya configurado en su clase original, 
-pero lo que se configuró y no se sobreescribe, se mantiene tal
-cual: */
-.nav.visible{
+/*ANIMACIÓN: */
+.animacion{
     opacity: 1;
-    visibility: visible; /*Desoculta el menú con los links*/
+    visibility: visible;    
 }
 
-.boton-abrir, .boton-cerrar{
-    border:0; /*Quita la línea negra del borde*/
-    font-size: 1.6em; /*Agranda el botón*/
-    background-color: transparent;
+.animacion-2{
+    transform: translateX(0%);
 }
 
-.boton-cerrar{
-    color: #FFF;
+/*---MENU HAMBURGUESA---*/
+
+/*El "menu__barras", al tener una "position:absolute",
+se posiciona con respecto al "header" que tiene una
+"position:relative" y, además, es hijo de él.*/
+.menu__barras{   
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top:40%;
+    right: 10%;
+    transform: scale(1);
+    cursor: pointer;       
+    z-index: 3;    
 }
+
+.menu__barras > span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    margin-top: 6px;
+    transform-origin: 0px 100%;
+    transition: all 600ms;
+}
+
+/*Clases que no estan en el HTML, pero que seran
+agregadas a las barras <span> mediante JavaScript: */
+.activarLinea1__menu-barras{
+    transform: rotate(45deg) translate(-2px, 1px);
+}
+
+.activarLinea2__menu-barras{
+    opacity: 0;
+    margin-left: -30px;
+}
+
+.activarLinea3__menu-barras{
+    transform: rotate(-45deg) translate(-4px, 2px);
+}
+
+/*--------MAIN---------------------------------------------------------- */
 
 .primer-tramo{
     background-color:#eeeeee;
@@ -112,7 +169,6 @@ cual: */
 figcaption{
     text-align: center;
     font-family: 'Montserrat';
-    
 }
 
 .p-testimonios{
@@ -183,18 +239,23 @@ figcaption{
     border-top: 1px solid #FFF;
 }
 
-@media screen and (min-width:768px){
-    .carrusel{
-        display: block;
-    }
-
-    .carousel-inner{
-        max-height: 25em;        
-    }
-
+/*-----------TABLETS VERTICALES-----------------------------------------------------*/
+@media screen and (min-width:768px){    
     .header{
         padding-left: 4em;
         padding-right: 4em;
+    }
+
+    .logo{
+        max-width: 250px;
+    }
+    .contenido-menu{
+        max-width: 340px;
+    }
+
+    .nav{
+        padding-left: 2.7em;
+        
     }
 
     .primer-tramo, .segundo-tramo{
@@ -261,13 +322,14 @@ figcaption{
     }
 }
 
+/*-----------PANTALLAS GRANDES AJUSTE FINO---------------------------------------*/
 @media screen and (min-width:1024px) {
     .carrusel{
         display: block;
     }
 
     .carousel-inner{
-        max-height: 35em;        
+        max-height: 20em;        
     }
 
     h1{
@@ -278,48 +340,61 @@ figcaption{
         font-size: 2.5rem;
     }
 
+    .logo{
+        max-width: 180px;
+    }
+
     .header{
         padding-left: 10em;
         padding-right: 10em;
     }
 
-    .boton-abrir{
+    /*Ocultar el botón de barras:*/
+    .menu__barras{
         display: none;
     }
 
-    .boton-cerrar{
-        display: none;
-    }
-
-    .nav{
-        opacity: 1;
-        visibility: visible;
-        flex-direction: row;
+    .container-menu{
         position:static;
         background-color:transparent;
+        width: auto;
+        height: auto;        
+        opacity: 1;
+        visibility: visible;
+        transition: all 0ms ease;
     }
 
-    .nav-list{
-        flex-direction: row; /*Un link debajo del otro*/
-        align-items: end; 
+    .contenido-menu{
+        position: static;
+        width: auto;
+        max-width:fit-content; /*Deja que el contenido ajuste el ancho*/           
+        background-color:transparent;
+        height: auto;
+        transform: translateX(0%);
+        transition: all 0ms ease;
+    }
+    
+    .nav{
+        display: flex;
+        flex-direction:row;
+        justify-content: end;    
+        gap: 2em;
+        padding-left: 1em;
+        transform: translateY(0%); /*Altura de los links con respecto al header*/
+    }
+    
+    .nav > a{
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 5px;
+        color: #12322B;
     }
 
-    .nav-list > li > a{
-        color: blue;
-        font-size: 0.9rem;
+    .nav > a:hover{
+        color:red;
+        text-decoration: underline;
     }
 
-    .imc{
-        display: none;
-    }
-
-    .tmb{
-        display: none;
-    }
-
-    .calorias{
-        display: none;
-    }
 
     .testimonios{
         justify-items: center;
@@ -408,6 +483,14 @@ figcaption{
         flex-shrink: 4;
     }
 
+    .sugerencias > a:hover{
+        color: red;
+    }
+
+    .contactos > a:hover{
+        color: red;
+    }
+
     .mapa{
         display: flex;
         flex-direction: column;
@@ -422,4 +505,21 @@ figcaption{
         max-width: 60%;
         text-align: center;
     }
+
+    .iconos-redes > a > img:hover{
+        transform: scale(0.56);
+        transition: all 100ms;        
+    }
+    
+}
+
+/*-----------PANTALLAS GRANDES HORIZONTALES---------------------------------------*/
+@media screen and (min-width:1140px) {
+    .carousel-inner{
+        max-height: 25em;        
+    }
+
+    .logo{
+        max-width: 300px;
+    }    
 }
