@@ -200,6 +200,8 @@ figcaption{
     text-align: justify;
 }
 
+/*--------FOOTER---------------------------------------------------------- */
+
 .footer{
     background-color:#12322B;
     color: #FFF;
@@ -212,6 +214,10 @@ figcaption{
 .link-formulario{
     color:aqua;
     text-decoration: none;
+}
+
+.contacto > h3{
+    margin-top: 0.4em;
 }
 
 .contactos{
@@ -305,6 +311,10 @@ figcaption{
     .footer{
         padding-left: 3em;
         padding-right: 3em;
+    }
+
+    .contacto > h3{
+        margin-top: 0;
     }
 
     .grid-contacto{
