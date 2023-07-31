@@ -1,0 +1,160 @@
+*{
+    box-sizing: border-box;
+}
+
+ body{
+    background-color: #eeeeee;
+ }
+
+.contenedor{
+    display: flex;
+    flex-direction: column; 
+    background-color: white;   
+    width: 85vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.logo{
+    max-width: 70%;  
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1{
+    font-family: 'Montserrat';
+    font-size: 2rem;
+    text-align: center;
+    color:rgb(85, 85, 85);
+}
+
+.form{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;  
+    gap: 0.7em;
+}
+
+
+.caja-texto{
+    font-family: 'Poppins';
+    height: 3em;    
+    box-shadow: -1px 2px 5px #18182377;
+    border-radius: 5px;
+    outline-color: rgba(0, 0, 0, 0.192);
+    border: 0;
+    padding-left: 10px;
+    outline-color:#0DCAF0;
+}
+
+.caja-texto:valid{
+    outline-color: #00c257; 
+}
+
+.caja-check{
+    margin-top: 1.5em;
+    font-family: 'Poppins';    
+}
+
+.link-caja-check{
+    font-family: 'Poppins';
+    font-size: 0.9rem;
+    text-decoration: none;
+    color:#0DCAF0;
+}
+
+.link-caja-check:hover{
+    color:red;
+}
+
+.boton{
+    font-family: 'Poppins';
+    font-weight: bold;
+    height: 3em;
+    border-radius: 5px;
+    outline-color: none;
+    margin-top: 1em;
+    margin-bottom:1em ;
+    padding: 0;
+    border:0 ;
+    background-color: #0DCAF0;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.boton:hover{
+    transform: scale(0.98);
+    transition: all 300ms;
+    background-color: #009fbe;
+}
+
+.linea{
+    border-bottom: 1px solid #6C757D;
+    margin-bottom: 1em;
+}
+
+.registro{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pregunta-registro, .registrar-cuenta{
+    font-family: 'Poppins';
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.registrar-cuenta{
+    color: #0DCAF0;
+}
+
+.registrar-cuenta:hover{
+    color: red;
+}
+
+/*--------------PANTALLA VERTICAL TABLET------------------*/
+@media screen and (min-width:450px) {
+    .contenedor{        
+        width: 70vw;        
+    }
+}
+
+/*--------------PANTALLA AJUSTE FINO------------------*/
+@media screen and (min-width:650px) {
+    .contenedor{        
+        width: 60vw;        
+    }
+}
+
+/*--------------PANTALLA VERTICAL TABLET------------------*/
+@media screen and (min-width:768px) {
+    .contenedor{
+        width: 45vw;
+    }
+}
+
+/*--------------PANTALLA AJUSTE FINO------------------*/
+@media screen and (min-width:900px) {
+    .contenedor{
+        width: 40vw;
+    }
+}
+
+/*--------------PANTALLA MEDIANA------------------*/
+@media screen and (min-width:1024px) {
+    .contenedor{
+        width: 30vw;
+    }
+}
+
+
+/*--------------PANTALLA GRANDE------------------*/
+@media screen and (min-width:1300px) {
+    .contenedor{           
+        width: 20vw;        
+    }
+}
