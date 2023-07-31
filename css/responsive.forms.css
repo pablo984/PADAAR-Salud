@@ -1,0 +1,22 @@
+
+/*--------------PANTALLA VERTICAL TABLET------------------*/
+@media screen and (min-width:450px) {
+    .contenedor{         
+        max-width: 352.500px;  
+    }
+}
+
+/*--------------PANTALLA VERTICAL TABLET------------------*/
+@media screen and (min-width:768px) {
+    .contenedor{         
+        max-width: 400px;  
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .contenedor{         
+        max-width: 450px;  
+    }
+    
+}
+

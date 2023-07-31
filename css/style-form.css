@@ -5,8 +5,8 @@
 
  body{
     background-color: #eeeeee;
+    margin:0;
     padding: 0;
-    margin: 0;
 }
 
 .contenedor{
@@ -43,8 +43,8 @@ h1{
     gap: 0.7em;
 }
 
-
 .caja-texto{
+    font-family: 'Poppins';
     height: 3em;    
     box-shadow: -1px 2px 5px #18182377;
     border-radius: 5px;
@@ -62,27 +62,14 @@ h1{
     background-color:#0dcaf018;    
 }
 
-.caja-check{
-    margin-top: 1.5em;
-}
-
-.link-caja-check{
-    font-size: 0.9rem;
-    text-decoration: none;
-    color:#0DCAF0;
-}
-
-.link-caja-check:hover{
-    color:red;
-}
-
 .boton{
+    font-family: 'Poppins';
     font-weight: bold;
     height: 3em;
     border-radius: 5px;
     outline-color: none;
-    margin-top: 1em;
-    margin-bottom:1em;
+    margin-top: 2em;
+    margin-bottom:1em ;
     padding: 0;
     border:0 ;
     background-color: #0DCAF0;
@@ -101,22 +88,17 @@ h1{
     margin-bottom: 1em;
 }
 
-.registro{
+.pregunta-sesion, .link-iniciar-sesion{
     margin-left: auto;
     margin-right: auto;
+    font-size: 0.9rem;
 }
 
-.pregunta-registro, .registrar-cuenta{
-    font-size: 0.9rem;
+.link-iniciar-sesion{
+    color: #0DCAF0;
     text-decoration: none;
 }
 
-.registrar-cuenta{
-    color: #0DCAF0;
-}
-
-.registrar-cuenta:hover{
+.link-iniciar-sesion:hover{
     color: red;
 }
-
-

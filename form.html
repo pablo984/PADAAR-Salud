@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Formulario para registrarse en padaar salud">
+        <meta name="author" content="Pablo Araoz">
+        <link rel="icon" href="./img/logo.png" type="image/png">
+        <!--FUENTES: -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Belanosima&family=Poppins:wght@300;400&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Belanosima&family=Montserrat&family=Poppins:wght@300;400&display=swap">
+        <!--MIS CSS: -->
+        <link rel="stylesheet" href="./css/style-form.css">
+        <link rel="stylesheet" href="./css/responsive.forms.css">
+        <title>Registrarse</title>
+    </head>
+    
+    <body>
+        <section class="contenedor">
+            <img src="./img/Logo padaar.png" alt="logo" class="logo">
+            <h1>Crea tu cuenta</h1>
+            <form action="" method="post" class="form"> 
+                <label for="idNombre">Nombre:</label> 
+                <input type="text" name="nombre" id="idNombre" class="caja-texto" placeholder="Nombre de pila" required>
+
+                <label for="idApellido">Apellido:</label> 
+                <input type="text" name="apellido" id="idApellido" class="caja-texto" placeholder="Apellido paterno/materno" required>
+                
+                <label for="birthday">Fecha de nacimiento:</label>
+                <input type="date" id="birthday" name="birthday" class="caja-texto" required>
+
+                <label for="idCorreo">Correo electrónico:</label>
+                <input type="email" name="email" id="idCorreo" class="caja-texto" placeholder="nombre@correo" required>
+
+                <label for="idNombreUsuario">Usuario:</label> 
+                <input type="text" name="nombreUsuario" id="idNombreUsuario" class="caja-texto" placeholder="Nombre de usuario" required>
+                
+                <label for="idPassword">Contraseña:</label>
+                <input type="password" name="password" id="idPassword" class="caja-texto" placeholder="Contraseña de usuario" minlength="6" required>
+
+                <label for="idPassword">Repetir contraseña:</label>
+                <input type="password" name="password" id="idPassword" class="caja-texto" placeholder="Repetir contraseña de usuario" minlength="6" required>                
+                
+                <button type="submit" class="boton">REGISTRARSE</button>
+
+                <div class="linea"></div>                
+                
+                <label for="idSesion" class="pregunta-sesion">¿Ya tenes cuenta?</label>
+                <a href="login.html" id="idSesion" class="link-iniciar-sesion">Inicia sesión acá</a>                 
+            </form>
+        </section>
+        
+    </body>
+</html>

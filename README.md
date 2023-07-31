@@ -22,4 +22,10 @@ Se ajustaron varias cosas en el index.html para su resultado final:
 * Iconos de redes animados en pantallas grandes. 
 * Se achicaron un poco las imágenes en general. 
 
+Actualizaciones al 31/07/23: 
+
+* Página de login.
+* Página de registro. 
+* Decoraciones y correcciones. 
+
 

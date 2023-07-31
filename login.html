@@ -9,8 +9,9 @@
         <!--FUENTES: -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Belanosima&family=Poppins:wght@300;400&display=swap">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Belanosima&family=Montserrat&family=Poppins:wght@300;400&display=swap">
-        <!--MI CSS: -->
+        <!--MIS CSS: -->
         <link rel="stylesheet" href="./css/style-login.css">
+        <link rel="stylesheet" href="./css/responsive.forms.css">
         <title>Iniciar sesión</title>
     </head>
     
@@ -19,11 +20,11 @@
             <img src="./img/Logo padaar.png" alt="logo" class="logo">
             <h1>Iniciar Sesión</h1>
             <form action="" method="post" class="form"> 
-                <label for="idNombre"></label> 
+                <label for="idNombre">Usuario:</label> 
                 <input type="text" name="nombre" id="idNombre" class="caja-texto" placeholder="Nombre de usuario" required>
                 
-                <label for="idPassword"></label>
-                <input type="password" name="password" id="idPassword" class="caja-texto" placeholder="Contraseña" required>
+                <label for="idPassword">Contraseña:</label>
+                <input type="password" name="password" id="idPassword" class="caja-texto" placeholder="Contraseña de usuario" minlength="6" required>
 
                 <span>
                     <input type="checkbox" id="idCheck" name="recordar" class="caja-check">
@@ -37,7 +38,7 @@
 
                 <span class="registro">
                     <label for="idRegistro" class="pregunta-registro">¿No tenes cuenta?</label>
-                    <a href="http://" id="idRegistro" class="registrar-cuenta">Registrate acá</a>
+                    <a href="form.html" id="idRegistro" class="registrar-cuenta">Registrate acá</a>
                 </span>
 
             </form>
