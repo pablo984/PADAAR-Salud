@@ -147,6 +147,9 @@ agregadas a las barras <span> mediante JavaScript: */
 /*--------MAIN---------------------------------------------------------- */
 
 .primer-tramo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color:#eeeeee;
     padding: 2em;
     color:rgb(85, 85, 85);
@@ -205,7 +208,7 @@ figcaption{
 .footer{
     background-color:#12322B;
     color: #FFF;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
     font-size: 0.8rem;
     text-align: start;
     padding: 1em;
@@ -216,7 +219,21 @@ figcaption{
     text-decoration: none;
 }
 
+.nosotros > h3{
+    font-family: 'Montserrat' !important;
+    font-size: 1.1rem;
+    font-weight:600;
+}
+
+.sugerencias > h3{
+    font-family: 'Montserrat' !important;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
 .contacto > h3{
+    font-family: 'Montserrat' !important;
+    font-size: 1.1rem;
+    font-weight: 600;
     margin-top: 0.4em;
 }
 
@@ -236,6 +253,19 @@ figcaption{
     margin-left: 0.5em;
 }
 
+.mapa > h3{
+    font-family: 'Montserrat' !important;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.redes-sociales > h3{
+    font-family: 'Montserrat' !important;
+    font-size: 1.1rem;
+    margin-top: 1em;
+    font-weight: 600;
+}
+
 .iconos-redes > a > img{
     transform: scale(0.6);
 }
@@ -243,6 +273,12 @@ figcaption{
 .copyright{
     text-align: center;
     border-top: 1px solid #FFF;
+    margin-top: 1em;
+    padding-top: 0.5em;
+}
+
+.p-copyright{
+    text-align: center;
 }
 
 /*-----------TABLETS VERTICALES-----------------------------------------------------*/
@@ -355,8 +391,8 @@ figcaption{
     }
 
     .header{
-        padding-left: 10em;
-        padding-right: 10em;
+        padding-left: 7em;
+        padding-right: 7em;
     }
 
     /*Ocultar el botón de barras:*/
@@ -412,7 +448,7 @@ figcaption{
     }
 
     .primera-imagen, .segunda-imagen{
-        width: 70%;
+        width: 80%;
     }
 
     .primera-imagen > img{        
@@ -452,9 +488,8 @@ figcaption{
     }
 
     .primer-tramo, .segundo-tramo{
-        padding-left: 12em;
-        padding-right: 12em;
-        
+        padding-left: 8em;
+        padding-right: 8em;        
     }
 
     .segundo-tramo{
@@ -465,12 +500,8 @@ figcaption{
         margin-bottom: 2em;
     }
 
-    .segundo-tramo > article > div > p{
-        font-size: 1.2rem;
-    }
-
-    .descubri{
-        width: 70%;
+   .descubri{
+        width: 100%;
     }
 
     .footer{
@@ -532,4 +563,22 @@ figcaption{
     .logo{
         max-width: 300px;
     }    
+}
+
+/*-----------PANTALLAS MÁS GRANDES HORIZONTALES---------------------------------------*/
+@media screen and (min-width:1400px) {
+    .header{
+        padding-left: 15em;
+        padding-right: 15em;
+    }
+
+    .primer-tramo{
+        padding-left: 15em;
+        padding-right: 15em;
+    }
+
+    .segundo-tramo{
+        padding-left: 15em;
+        padding-right: 15em;
+    }
 }

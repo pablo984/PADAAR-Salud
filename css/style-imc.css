@@ -1,0 +1,140 @@
+*{
+    box-sizing: border-box;     
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+h1{
+    font-family: 'Montserrat' ;
+    text-align: center;
+    color:rgb(85, 85, 85);
+    margin-top: 0;
+    margin-bottom: 2em;
+}
+
+h2{
+    font-family: 'Montserrat';
+    color: rgb(85, 85, 85);
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+p{
+    font-family: 'Poppins';
+    text-align: justify;
+}
+
+.explicacion, .explicacion-ilustrada, .calcular-imc{
+    padding: 1em;
+}
+
+.explicacion, .calcular-imc{
+    background-color:#eeeeee;
+    color:rgb(85, 85, 85);
+}
+
+.genero, .edad, .altura, .peso{
+    font-family: 'Montserrat' ;
+    margin-top: 2em;
+    border-top: 1px solid #6C757D;
+    text-align: center;
+}
+
+.seleccion-genero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;    
+    align-items: end;
+    column-gap: 1em;
+}
+
+.icono-genero{
+    display: flex;
+    flex-direction: column;    
+}
+
+.boton-hombre, .boton-mujer{
+    font-family: 'Poppins';
+    font-weight: bold;
+    height: 3em;
+    border-radius: 5px;
+    outline-color: none;
+    margin-top: 1em;
+    margin-bottom:1em;
+    background-color: #6C757D;
+    padding: 0;
+    border:0 ;    
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.edad, .altura, .peso{
+    display: flex;
+    flex-direction: column;  
+    align-items: center;  
+    
+}
+
+.caja-edad, .caja-altura, .caja-peso{
+    max-width: 30%;
+    padding: 0.5em;    
+    border-radius: 5px;
+    border:1px solid #a6b5c2;
+    font-family: 'Poppins';
+    font-size: 2rem;
+    text-align: center;   
+    outline-color:#0DCAF0; 
+}
+
+.caja-edad::placeholder{
+    font-size: 1rem;
+    text-align: center;
+}
+
+.caja-altura::placeholder{
+    font-size: 1rem;
+    text-align: center;
+}
+
+.caja-peso::placeholder{
+    font-size: 1rem;
+    text-align: center;
+}
+
+.caja-edad:valid{
+    outline-color: #00c257; 
+}
+
+.caja-a.altura{
+    outline-color: #00c257; 
+}
+
+.caja-peso:valid{
+    outline-color: #00c257; 
+}
+
+.boton-calcular-imc{
+    font-family: 'Poppins';
+    font-size: 1rem;
+    width: 300px;
+    font-weight: bold;
+    height: 3em;
+    border-radius: 5px;
+    outline-color: none;
+    border:none;
+    margin-top: 3em;
+    margin-bottom:1em ;
+    background-color: rgb(0, 179, 179);
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.boton-calcular-imc:hover{
+    background-color: #12322B;
+}
+
+
+
+
+
