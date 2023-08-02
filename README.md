@@ -4,7 +4,7 @@ Se usó el "Carousel" de Bootstrap junto con el CDN de JS para dar
 el estilo de "Slider" a la página. 
 
 PROBLEMA CON SOLUCIÓN 1: 
-Cree mi propio botón para el menú desplegable. También le hice un 
+* Cree mi propio botón para el menú desplegable. También le hice un 
 estilo propio de deslizamiento horizontal de izquierda a derecha
 después de muchos intentos, ya que inicialmente quería que el 
 desplazamiento sea de derecha a izquierda, pero esto me traía un 
@@ -32,7 +32,7 @@ Actualizaciones al 31/07/23:
 * Arreglos de responsive que quedaban mal. 
 
 PROBLEMA CON SOLUCIÓN 2: 
-En el "index.html" los "h3" cambiaban su tamaño y grosor de fuente porque 
+* En el "index.html" los "h3" cambiaban su tamaño y grosor de fuente porque 
 el CDN de Bootstrap lo mofidicaba. Eso lo noté cuando comencé el proyecto
 del "imc.html" y vi que al copiar y pegar parte del "footer" del "index.html"
 el texto de los "h3" era diferente. Eso pasaba porque no había vinculado el
@@ -42,5 +42,23 @@ La solución hubiese sido sencillamente vincular dicho CDN de Bootstrap, pero
 decidí que el texto original queda mejor en el "footer", así que le di estilo
 a los "h3" en la parte del "footer" en el "style.css" y los marqué como 
 "!important" para que sobreescriba al estilo de Bootstrap. 
+
+PROBLEMA CON SOLUCIÓN 3:
+* En JavaScript, en la función "mostrarIMC()" la cual tiene los condicionales 
+que evalúan el cálculo del IMC según el peso y la altura y luego los insertan 
+en el HTML, tenía el PROBLEMA de que a veces sólo elegía la última condición 
+(La del "else") y era porque en la función "realizarCalculos()" NO RECORTABA
+los decimales que me arrojaba el cálculo aritmético. Entonces, a veces el 
+resultado era un número con muchos decimales después de la coma y, obviamente, 
+era distinto a los números a evaluar, los cuales sólo tienen un decimal después
+de la coma. 
+
+La SOLUCIÓN: en la función "realizarCalculos()" a la línea que realiza el cálculo
+"resultadoIMC = (pesoIMC / (alturaAMetros ** 2))" le RECORTÉ los decimales de la 
+siguiente manera: "resultadoIMC = (pesoIMC / (alturaAMetros ** 2)).toFixed(1)".
+
+De esa manera, el código primero calcula el IMC, luego recorta los decimales del 
+resultado a sólo 1, y luego compara el resultado con los valores establecidos en 
+la función "mostrarIMC()".
 
 
