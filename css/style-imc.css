@@ -233,6 +233,25 @@ p{
     border-radius: 5px;
 }
 
+.mensaje-bajar-peso, .mensaje-subir-peso, .mensaje-felicitaciones, .mensaje-peso-ideal-h, .mensaje-peso-ideal-m{
+    display: none;
+}
+
+.span-bajar{
+    font-weight: bolder;
+    color:red;
+}
+
+.span-subir{
+    font-weight: bolder;
+    color:blue;
+}
+
+.span-peso-ideal-hombre, .span-peso-ideal-mujer{
+    font-weight: bolder;
+    color:green;
+}
+
 .boton-reset{
     font-family: 'Poppins';
     font-size: 1rem;
@@ -245,7 +264,7 @@ p{
     background-color: rgb(128, 0, 0);
     color: rgb(255, 255, 255);
     cursor: pointer;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 

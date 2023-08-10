@@ -9,6 +9,15 @@ const seccionResultado = document.querySelector(".resultado");
 const cajaResultado = document.querySelector(".caja-resultado");
 const spanIMC = document.querySelector(".span-imc");
 const spanMensajeIMC = document.querySelector(".mensaje-imc");
+const mensajeFelicitaciones = document.querySelector(".mensaje-felicitaciones");
+const mensajeBajarPeso = document.querySelector(".mensaje-bajar-peso");
+const mensajeSubirPeso = document.querySelector(".mensaje-subir-peso");
+const spanBajar = document.querySelector(".span-bajar");
+const spanSubir = document.querySelector(".span-subir");
+const mensajePesoIdealHombre = document.querySelector(".mensaje-peso-ideal-h");
+const mensajePesoIdealMujer = document.querySelector(".mensaje-peso-ideal-m");
+const spanPesoIdealHombre = document.querySelector(".span-peso-ideal-hombre");
+const spanPesoIdealMujer = document.querySelector(".span-peso-ideal-mujer");
 const botonReset = document.querySelector(".boton-reset");
 
 
@@ -34,14 +43,11 @@ const obesidadMorbidaM = document.querySelector(".obesidad-morbida-M");
 
 
 //Variables que almacenan la info del usuario:
-let sexoIMC;
+let sexoIMC = "";
 let edadIMC;
 let alturaIMC;
 let pesoIMC;
 let resultadoIMC;
-
-//Variables que contienen la información del IMC:
-let delgadezMuySevera = "Delgadez muy severa";
 
 /*Eventos al hacer click: */
 botonHombre.addEventListener("click", cambiarColorHombre);
@@ -69,14 +75,34 @@ function cambiarColorMujer(){
 
 function calcular(){
     cargarDatos();
-    realizarCalculos();
-    mostrarIMC();       
+    chequearIngresosYCalcular();        
 }
 
 function cargarDatos(){
     edadIMC = cajaEdad.value;
     alturaIMC = cajaAltura.value;
     pesoIMC  = cajaPeso.value;      
+}
+
+function chequearIngresosYCalcular(){
+    if(sexoIMC == ""){
+        alert("Tenés que seleccionar tu género");
+    }
+    else if(alturaIMC == ""){
+        alert ("Tenés que ingresar tu altura");
+        cajaAltura.focus();
+
+    }
+    else if(pesoIMC == ""){
+        alert ("Tenés que ingresar tu peso");
+        cajaPeso.focus();
+    }
+    else{
+        realizarCalculos();
+        mostrarIMC();   
+        calcularPesoMinimoYMaximo();
+        calcularPesoIdeal();
+    }
 }
 
 function realizarCalculos(){
@@ -216,15 +242,46 @@ function mostrarIMC(){
         obesidadMorbidaM.style.display = "block";
         mostrarResultado();
         botonCalcularIMC.disabled = true;
-    }
-    else{
-        alert("Debe seleccionar su sexo");
-    } 
+    }    
 }
 
 function mostrarResultado(){
     spanIMC.innerHTML = resultadoIMC;
-    seccionResultado.style.display="block";
+    seccionResultado.style.display = "block";
+}
+
+function calcularPesoMinimoYMaximo(){
+    let alturaEnMetros = alturaIMC / 100;
+    let pesoMinimo = (18.5 * (alturaEnMetros ** 2));
+    let pesoMaximo = (24.9 * (alturaEnMetros ** 2));
+
+    if(resultadoIMC >= 25) {
+        spanBajar.innerHTML = (pesoIMC - pesoMaximo).toFixed(1);
+        mensajeBajarPeso.style.display = "block";
+        
+    }
+    else if(resultadoIMC <= 18.4) {
+        spanSubir.innerHTML = (pesoMinimo - pesoIMC).toFixed(1);
+        mensajeSubirPeso.style.display = "block";
+    }  
+    else{
+        mensajeFelicitaciones.style.display = "block";
+    }
+}
+
+function calcularPesoIdeal(){
+    let indiceDeBroca = alturaIMC - 100;
+    let iBrocaEnhombre = indiceDeBroca - ((indiceDeBroca - 52) * 0.2);
+    let iBrocaEnmujer = indiceDeBroca - ((indiceDeBroca - 52) * 0.4);
+
+    if(sexoIMC == "Hombre"){
+        spanPesoIdealHombre.innerHTML = iBrocaEnhombre;
+        mensajePesoIdealHombre.style.display = "block";
+    }
+    else{
+        spanPesoIdealMujer.innerHTML = iBrocaEnmujer;
+        mensajePesoIdealMujer.style.display = "block";
+    }
 }
 
 
