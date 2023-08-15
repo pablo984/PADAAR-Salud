@@ -18,7 +18,6 @@ h1{
 h2{
     font-family: 'Montserrat';
     color: rgb(85, 85, 85);
-    /* font-size: 1.2rem; */
     text-align: center;
 }
 
@@ -41,7 +40,7 @@ body{
 }
 
 .logo{
-    max-width: 200px;
+    min-width: 200px;
     z-index: 3;
 }
 
@@ -158,10 +157,18 @@ agregadas a las barras <span> mediante JavaScript: */
 
 .tips{
     display: flex;
+    min-width: 250px;
+    max-width: 1050px;
+    width: 100%;
     text-align: center;
-    justify-content: center;
+    justify-content: space-around;
+    column-gap: 40px;
     border-bottom: 1px solid #5e5e5e;
     padding-bottom: 3em;
+}
+
+.img-tips{
+    width: 25px;    
 }
 
 .p-tips{
@@ -289,9 +296,6 @@ figcaption{
         padding-right: 4em;
     }
 
-    .logo{
-        max-width: 250px;
-    }
     .contenido-menu{
         max-width: 340px;
     }
@@ -299,6 +303,12 @@ figcaption{
     .nav{
         padding-left: 2.7em;
         
+    }
+
+    .p-tips{
+        margin: 0;
+        font-family: 'Poppins';
+        font-size: 1.1rem;
     }
 
     .primer-tramo, .segundo-tramo{
@@ -342,7 +352,7 @@ figcaption{
         display: block;
         font-family: 'Poppins';
         margin: 0;
-        text-align: center;
+        text-align: justify;        
     }
 
     .footer{
@@ -369,6 +379,28 @@ figcaption{
     }
 }
 
+/*-------------RESPONSIVE DE IMÁGENES------------------------------------------- */
+@media (min-width: 321px) and (max-width: 1024px) {
+    .logo{
+        width: calc(200px + (300 - 200) * ((100vw - 320px) / (1024 - 320))); ;
+    }
+
+    .img-tips {
+        width: calc(25px + (50 - 25) * ((100vw - 320px) / (1024 - 320))); /* Fórmula para tamaño responsivo entre 25px y 50px */
+    }
+}
+
+@media (min-width: 1025px) {
+    .logo{
+        width: 300px;
+    }
+
+    .img-tips {
+        width: 50px; /* Tamaño fijo para pantallas mayores a 1024px */
+    }
+}
+
+
 /*-----------PANTALLAS GRANDES AJUSTE FINO---------------------------------------*/
 @media screen and (min-width:1024px) {
     .carrusel{
@@ -385,10 +417,6 @@ figcaption{
 
     h2{
         font-size: 2.5rem;
-    }
-
-    .logo{
-        max-width: 180px;
     }
 
     .header{
@@ -425,8 +453,8 @@ figcaption{
         display: flex;
         flex-direction:row;
         justify-content: end;    
-        gap: 2em;
-        padding-left: 1em;
+        gap: 1em;
+        padding-left: 0;
         transform: translateY(0%); /*Altura de los links con respecto al header*/
     }
     
@@ -442,6 +470,11 @@ figcaption{
         text-decoration: underline;
     }
 
+    .p-tips{
+        margin: 0;
+        font-family: 'Poppins';
+        font-size: 1.4rem;
+    }
 
     .testimonios{
         justify-items: center;
@@ -561,9 +594,11 @@ figcaption{
         max-height: 25em;        
     }
 
-    .logo{
-        max-width: 300px;
-    }    
+    .p-tips{
+        margin: 0;
+        font-family: 'Poppins';
+        font-size: 1.5rem;
+    }
 }
 
 /*-----------PANTALLAS MÁS GRANDES HORIZONTALES---------------------------------------*/
@@ -576,10 +611,26 @@ figcaption{
     .primer-tramo{
         padding-left: 15em;
         padding-right: 15em;
+    }   
+
+    .p-tips{
+        margin: 0;
+        font-family: 'Poppins';
+        font-size: 1.6rem;
+    }
+
+    .p-oculto{
+        font-size: 1.2rem;
     }
 
     .segundo-tramo{
         padding-left: 15em;
         padding-right: 15em;
+    }
+}
+
+@media screen and (min-width:1900px){
+    .p-oculto{
+        font-size: 1.4rem;
     }
 }
