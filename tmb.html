@@ -14,8 +14,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
         <!--MI CSS: -->
         <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="./css/style-imc.css">
-        <title>IMC</title>
+        <link rel="stylesheet" href="./css/style-tmb.css">
+        <title>TMB</title>
     </head>
     
     <body>
@@ -44,22 +44,20 @@
 
         <main>
             <section class="explicacion">
-                <h1>INDICE DE MASA CORPORAL</h1>
-                <h2>¿Qué es el Indice de Masa Corporal?</h2>
-                <p>El Indice de Masa Corporal <strong>(IMC)</strong> es un método utilizado para estimar la cantidad de grasa corporal que 
-                    tiene una persona y determinar, por tanto, si el peso está dentro del rango normal o, por el contrario, 
-                    se tiene sobrepeso o delgadez. Para ello, se pone en relación la estatura y el peso actual del individuo. 
-                    </p>
+                <h1>TASA METABÓLICA BASAL</h1>
+                <h2>¿Qué es la Tasa Metabólica Basal?</h2>
+                <p>La Tasa Metabólica Basal <strong>(TMB)</strong> es el valor mínimo de energía necesario para que una célula de nuestro cuerpo subsista, es decir, la cantidad de energía que necesita una persona en estado de reposo. La <strong>TMB</strong> representa la cantidad de calorías que tu cuerpo consume para realizar funciones básicas como respirar, bombear sangre, sintetizar hormonas, entre otras cosas. Esta energía basal consumida varía según el sexo, la edad y la actividad física del individuo. 
+                </p>
             </section>
             
             <section class="explicacion-ilustrada">
-                <h2>Detalle gráfico del IMC</h2>
+                <h2>Detalle gráfico de la TMB</h2>
                 <img src="./img/IMC.jpg" alt="tabla de IMC" width="100%">
-                <figcaption>Tabla de los parámetros del IMC</figcaption>
+                <figcaption>Tabla de los parámetros de la TMB</figcaption>
             </section>
 
-            <section class="calcular-imc">
-                <h2>Calcular IMC</h2>
+            <section class="calcular-tmb">
+                <h2>Calcular TMB</h2>
                 <p>Para un cálculo correcto se necesitan los datos básicos sobre vos.
                 </p>
                 <div class="genero">
@@ -87,52 +85,18 @@
                     <h3>¿Cuánto pesas?</h3>
                     <input type="number" id="idPeso" class="caja-peso" placeholder="Kg" required>
 
-                    <button class="boton-calcular-imc">Calcular IMC</button>
+                    <button class="boton-calcular-tmb">Calcular TMB</button>
                 </div>
                 <div class="resultado">
                     <div class="mostrar-resultado">
-                        <h3>Tu IMC es de </h3>                  
+                        <h3>Tu TMB es de </h3>                  
                         <div class="caja-resultado" id="idCajaResultado">
-                            <img src="./img/Delgadez muy severa-H.png" alt="delgadez-muy-severa" width="80px" class="delgadez-muy-severa">
-                            <img src="./img/Delgadez severa-H.png" alt="delgadez-severa" width="80px" class="delgadez-severa">
-                            <img src="./img/Delgadez-H.png" alt="delgadez" width="80px" class="delgadez">
-                            <img src="./img/Saludable-H.png" alt="saludable" width="80px" class="saludable">
-                            <img src="./img/Sobrepeso-H.png" alt="sobrepeso" width="80px" class="sobrepeso">
-                            <img src="./img/Obesidad moderada-H.png" alt="obesidad-moderada" width="80px" class="obesidad-moderada">
-                            <img src="./img/Obesidad severa-H.png" alt="obesidad-severa" width="80px" class="obesidad-severa">
-                            <img src="./img/Obesidad mórbida-H.png" alt="obesidad-morbida" width="80px" class="obesidad-morbida">
-
-                            <img src="./img/Delgadez muy severa-M.png" alt="delgadez-muy-severa" width="80px" class="delgadez-muy-severa-M">
-                            <img src="./img/Delgadez severa-M.png" alt="delgadez-severa" width="80px" class="delgadez-severa-M">
-                            <img src="./img/Delgadez-M.png" alt="delgadez" width="80px" class="delgadez-M">
-                            <img src="./img/Saludable-M.png" alt="saludable" width="80px" class="saludable-M">
-                            <img src="./img/Sobrepeso-M.png" alt="sobrepeso" width="80px" class="sobrepeso-M">
-                            <img src="./img/Obesidad moderada-M.png" alt="obesidad-moderada" width="80px" class="obesidad-moderada-M">
-                            <img src="./img/Obesidad severa-M.png" alt="obesidad-severa" width="80px" class="obesidad-severa-M">
-                            <img src="./img/Obesidad mórbida-M.png" alt="obesidad-morbida" width="80px" class="obesidad-morbida-M">
-                            
-                            <span class="span-imc"></span>
-                            <span class="mensaje-imc"></span>
-                            <section class="sugerencias">
-                                <p class="mensaje-felicitaciones">
-                                    Felicitaciones! Estas con un peso normal 🎉😁! 
-                                </p>
-                                <p class="mensaje-bajar-peso">
-                                    Para estar con un IMC normal tenés que bajar, al menos, <span class="span-bajar"></span> kilos.
-                                </p>
-                                <p class="mensaje-subir-peso">
-                                    Para estar con un IMC normal tenes que subir, al menos, <span class="span-subir"></span> kilos.
-                                </p>
-                                <p class="mensaje-peso-ideal-h">
-                                    Por ser hombre, tu peso ideal, según tu altura, es de <span class="span-peso-ideal-hombre"></span> kilos.
-                                </p>
-                                <p class="mensaje-peso-ideal-m">
-                                    Por ser mujer, tu peso ideal, según tu altura, es de <span class="span-peso-ideal-mujer"></span> kilos.
-                                </p>
-                            </section>
-                            
-                            <button class="boton-reset" id="seccion-reset">RESET</button>
+                                                        
+                            <span class="span-tmb"></span>
+                            <span class="mensaje-tmb">calorías diarias</span>
+                                                        
                         </div>
+                        <button class="boton-reset" id="seccion-reset">RESET</button>
                     </div>                      
                 </div>
             </section>             
@@ -166,6 +130,6 @@
 
         <!--Script Js para el control del menú-->
         <script src="./js/script.js"></script>
-        <script src="./js/script-imc.js"></script>
+        <script src="./js/script-tmb.js"></script>
     </body>
 </html>
