@@ -1,0 +1,246 @@
+
+.carrusel{
+    display: none;
+}
+
+/*---------------HEADER--------------------------------*/
+/*En el archivo style-comunes.css*/
+
+
+/*-----------MAIN---------------------------------- */
+.primer-tramo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#eeeeee;
+    padding: 2em;
+    color:rgb(85, 85, 85);
+}
+
+.tips{
+    display: flex;
+    min-width: 250px;
+    max-width: 1050px;
+    width: 100%;
+    text-align: center;
+    justify-content: space-around;
+    column-gap: 40px;
+    border-bottom: 1px solid #5e5e5e;
+    padding-bottom: 3em;
+}
+
+.img-tips{
+    width: 25px;    
+}
+
+.p-tips{
+    margin: 0;
+    font-family: 'Poppins';
+    font-size: 0.9rem;
+}
+
+figcaption{
+    text-align: center;    
+}
+
+.p-testimonios{
+    font-family: 'Poppins';
+    text-align: justify;
+}
+
+.primera-imagen{
+    margin-bottom: 3em;
+}
+
+.segundo-tramo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
+    text-align: center;
+    color:rgb(85, 85, 85); 
+    border-bottom: 1px solid rgb(85, 85, 85);   
+}
+
+.p-oculto{
+    display: none;
+}
+
+.ultimo-parrafo-article{
+    margin-bottom: 0;
+    font-family: 'Poppins';
+    text-align: justify;
+}
+
+/*---------------FOOTER-------------------- */
+/*En el archivo styles-comunes.css */
+
+
+/*--------------RESPONSIVE----------------- */
+@media screen and (min-width:768px){ 
+    /*--------MAIN EN TABLETS VERTICALES-------*/
+    .carrusel{
+        display: block;
+    }
+
+    .carousel-inner{
+        max-height: 12em;        
+    }
+
+    .p-tips{
+        font-size: 1.1rem;
+    }
+
+    .primer-tramo, .segundo-tramo{
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+
+    .testimonios{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+    }
+
+    .descubri{
+        display: grid;
+        grid-template-columns: 1fr 1fr;         
+        gap: 30px;
+    }
+
+    .descubri-1 > img{
+        max-width: 81%;
+    }
+
+    .descubri-2 > img{
+        max-width: 99%; 
+    }
+
+    .descubri-3 > img{
+        max-width: 80%;
+    }
+
+    .p-testimonios.media{
+        text-align: center;
+    }
+
+    .ultimo-parrafo-article.media{
+        text-align: center;
+    }
+
+    .p-oculto{
+        display: block;
+        font-family: 'Poppins';
+        margin: 0;
+        text-align: justify;        
+    }    
+}
+
+/*-----------PANTALLAS GRANDES AJUSTE FINO---------------------------------------*/
+@media screen and (min-width:1024px) {
+    /*--------MAIN A 1024px-------*/
+    .carousel-inner{
+        max-height: 16em;        
+    }
+
+    .p-tips{
+        font-size: 1.4rem;
+    }
+
+    .testimonios{
+        justify-items: center;
+        gap:0;
+    }
+
+    .primera-imagen, .segunda-imagen{
+        width: 80%;
+    }
+
+    .primera-imagen > img{        
+        transform: scale(0.8);
+        filter: grayscale(80%); 
+        transition: 1s; 
+    }
+
+    .primera-imagen > img:hover{
+        transform: scale(1);
+        filter: grayscale(0%);
+        transition: 1s;
+    }
+
+    .segunda-imagen > img{
+        transform: scale(0.8);
+        filter: grayscale(80%); 
+        transition: 1s; 
+    }
+
+    .segunda-imagen > img:hover{
+        transform: scale(1);
+        filter: grayscale(0%);
+        transition: 1s;
+    }
+
+    .primera-imagen > p{
+        font-size: 1rem;
+    }
+
+    .segunda-imagen > p{
+        font-size: 1rem;
+    }
+
+    .primer-tramo, .segundo-tramo{
+        padding-left: 8em;
+        padding-right: 8em;        
+    }
+
+    .segundo-tramo{
+        align-items: center;
+    }
+
+    .segundo-tramo > h2{
+        margin-bottom: 2em;
+    }
+
+   .descubri{
+        width: 100%;
+    }    
+}
+
+/*-----------PANTALLAS GRANDES HORIZONTALES---------------------------------------*/
+@media screen and (min-width:1140px) {
+    .carousel-inner{
+        max-height: 25em;        
+    }
+
+    .p-tips{
+        font-size: 1.5rem;
+    }
+}
+
+/*-----------PANTALLAS MÁS GRANDES HORIZONTALES---------------------------------------*/
+@media screen and (min-width:1400px) {    
+    /*--------MAIN A 1400px-------*/
+    .primer-tramo{
+        padding-left: 15em;
+        padding-right: 15em;
+    }   
+
+    .p-tips{
+        font-size: 1.6rem;
+    }
+
+    .p-oculto{
+        font-size: 1.2rem;
+    }
+
+    .segundo-tramo{
+        padding-left: 15em;
+        padding-right: 15em;
+    }
+}
+
+@media screen and (min-width:1900px){
+    .p-oculto{
+        font-size: 1.4rem;
+    }
+}

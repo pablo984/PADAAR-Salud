@@ -8,7 +8,6 @@ html{
 }
 
 h1{
-    font-family: 'Montserrat' ;
     text-align: center;
     color:rgb(85, 85, 85);
     margin-top: 0;
@@ -16,7 +15,6 @@ h1{
 }
 
 h2{
-    font-family: 'Montserrat';
     color: rgb(85, 85, 85);
     text-align: center;
 }
@@ -25,10 +23,7 @@ body{
     margin:0;
 }
 
-.carrusel{
-    display: none;
-}
-
+/*---------------HEADER--------------------------------*/
 .header{
     display: flex;
     align-items: center;
@@ -41,7 +36,7 @@ body{
 
 .logo{
     min-width: 200px;
-    z-index: 3;
+    z-index: 7;
 }
 
 .container-menu{
@@ -54,6 +49,7 @@ body{
     opacity: 0;
     visibility: hidden;
     transition: all 500ms ease;
+    z-index: 3;
 }
 
 /*--------------------ATENCIÓN--------------------: 
@@ -75,7 +71,7 @@ página tiene un límite, y no genera ningún HUECO.
     height: 100vh;
     transform: translateX(-100%);
     transition: all 500ms ease;
-    z-index: 2;
+    z-index: 5;
 }
 
 .nav{
@@ -103,9 +99,8 @@ página tiene un límite, y no genera ningún HUECO.
     transform: translateX(0%);
 }
 
-/*---MENU HAMBURGUESA---*/
-
-/*El "menu__barras", al tener una "position:absolute",
+/*-------MENU HAMBURGUESA--------------------------
+El "menu__barras", al tener una "position:absolute",
 se posiciona con respecto al "header" que tiene una
 "position:relative" y, además, es hijo de él.*/
 .menu__barras{   
@@ -116,7 +111,7 @@ se posiciona con respecto al "header" que tiene una
     right: 10%;
     transform: scale(1);
     cursor: pointer;       
-    z-index: 3;    
+    z-index: 5;    
 }
 
 .menu__barras > span{
@@ -144,79 +139,11 @@ agregadas a las barras <span> mediante JavaScript: */
     transform: rotate(-45deg) translate(-4px, 2px);
 }
 
-/*--------MAIN---------------------------------------------------------- */
 
-.primer-tramo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color:#eeeeee;
-    padding: 2em;
-    color:rgb(85, 85, 85);
-}
-
-.tips{
-    display: flex;
-    min-width: 250px;
-    max-width: 1050px;
-    width: 100%;
-    text-align: center;
-    justify-content: space-around;
-    column-gap: 40px;
-    border-bottom: 1px solid #5e5e5e;
-    padding-bottom: 3em;
-}
-
-.img-tips{
-    width: 25px;    
-}
-
-.p-tips{
-    margin: 0;
-    font-family: 'Poppins';
-    font-size: 0.9rem;
-}
-
-figcaption{
-    text-align: center;
-    font-family: 'Montserrat';
-}
-
-.p-testimonios{
-    font-family: 'Poppins';
-    text-align: justify;
-}
-
-.primera-imagen{
-    margin-bottom: 3em;
-}
-
-.segundo-tramo{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2em;
-    text-align: center;
-    color:rgb(85, 85, 85); 
-    border-bottom: 1px solid rgb(85, 85, 85);   
-}
-
-.p-oculto{
-    display: none;
-}
-
-.ultimo-parrafo-article{
-    margin-bottom: 0;
-    font-family: 'Poppins';
-    text-align: justify;
-}
-
-/*--------FOOTER---------------------------------------------------------- */
-
+/*---------------FOOTER-------------------- */
 .footer{
     background-color:#12322B;
-    color: #FFF;
-    font-family: 'Montserrat';
+    color: #FFF;    
     font-size: 0.8rem;
     text-align: start;
     padding: 1em;
@@ -228,18 +155,18 @@ figcaption{
 }
 
 .nosotros > h3{
-    font-family: 'Montserrat' !important;
+    /* font-family: 'Montserrat' !important; */
     font-size: 1.1rem;
     font-weight:600;
 }
 
 .sugerencias > h3{
-    font-family: 'Montserrat' !important;
+    /* font-family: 'Montserrat' !important; */
     font-size: 1.1rem;
     font-weight: 600;
 }
 .contacto > h3{
-    font-family: 'Montserrat' !important;
+    /* font-family: 'Montserrat' !important; */
     font-size: 1.1rem;
     font-weight: 600;
     margin-top: 0.4em;
@@ -251,7 +178,7 @@ figcaption{
 
 .contactos > i{
     font-size: 1rem;
-    font-family: 'Montserrat';
+    /* font-family: 'Montserrat'; */
     font-style: normal;  
 }
 
@@ -262,13 +189,13 @@ figcaption{
 }
 
 .mapa > h3{
-    font-family: 'Montserrat' !important;
+    /* font-family: 'Montserrat' !important; */
     font-size: 1.1rem;
     font-weight: 600;
 }
 
 .redes-sociales > h3{
-    font-family: 'Montserrat' !important;
+    /* font-family: 'Montserrat' !important; */
     font-size: 1.1rem;
     margin-top: 1em;
     font-weight: 600;
@@ -289,8 +216,35 @@ figcaption{
     text-align: center;
 }
 
-/*-----------TABLETS VERTICALES-----------------------------------------------------*/
+/*-------------RESPONSIVE DE LOGO Y TIPS----------------------------------- */
+@media (min-width: 321px) and (max-width: 1920px) {
+    .logo{
+        width: calc(200px + (300 - 200) * ((100vw - 320px) / (1920 - 320))); ;
+    }
+
+    .img-tips {
+        width: calc(25px + (50 - 25) * ((100vw - 320px) / (1920 - 320))); /* Fórmula para tamaño responsivo entre 25px y 50px */
+    }
+}
+
+/*--------------AJUSTE PARA PANTALLAS DE MÁS DE 1920px---------------------*/
+@media screen and (min-width: 1921px) {
+    .logo{
+        width: 300px;
+    }
+}
+
+/*----AJUSTE FINO PARA MI CELULAR--- */
+@media screen and (min-width:412px) {
+    .contenido-menu{
+        max-width: 238px;
+    }
+}
+
+
+/*-------------------------RESPONSIVE EN TABLETS VERTICALES--------------- */
 @media screen and (min-width:768px){    
+    /*-------------------------HEADER------------------------------------- */ 
     .header{
         padding-left: 4em;
         padding-right: 4em;
@@ -301,60 +255,10 @@ figcaption{
     }
 
     .nav{
-        padding-left: 2.7em;
-        
+        padding-left: 2.7em;        
     }
 
-    .p-tips{
-        margin: 0;
-        font-family: 'Poppins';
-        font-size: 1.1rem;
-    }
-
-    .primer-tramo, .segundo-tramo{
-        padding-left: 4em;
-        padding-right: 4em;
-    }
-
-    .testimonios{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 30px;
-    }
-
-    .descubri{
-        display: grid;
-        grid-template-columns: 1fr 1fr;         
-        gap: 30px;
-    }
-
-    .descubri-1 > img{
-        max-width: 81%;
-    }
-
-    .descubri-2 > img{
-        max-width: 99%; 
-    }
-
-    .descubri-3 > img{
-        max-width: 80%;
-    }
-
-    .p-testimonios.media{
-        text-align: center;
-    }
-
-    .ultimo-parrafo-article.media{
-        text-align: center;
-    }
-
-    .p-oculto{
-        display: block;
-        font-family: 'Poppins';
-        margin: 0;
-        text-align: justify;        
-    }
-
+    /*-------------------------FOOTER----------------------------------- */
     .footer{
         padding-left: 3em;
         padding-right: 3em;
@@ -379,38 +283,8 @@ figcaption{
     }
 }
 
-/*-------------RESPONSIVE DE IMÁGENES------------------------------------------- */
-@media (min-width: 321px) and (max-width: 1024px) {
-    .logo{
-        width: calc(200px + (300 - 200) * ((100vw - 320px) / (1024 - 320))); ;
-    }
-
-    .img-tips {
-        width: calc(25px + (50 - 25) * ((100vw - 320px) / (1024 - 320))); /* Fórmula para tamaño responsivo entre 25px y 50px */
-    }
-}
-
-@media (min-width: 1025px) {
-    .logo{
-        width: 300px;
-    }
-
-    .img-tips {
-        width: 50px; /* Tamaño fijo para pantallas mayores a 1024px */
-    }
-}
-
-
-/*-----------PANTALLAS GRANDES AJUSTE FINO---------------------------------------*/
+/*-------------------------RESPONSIVE EN 1024px--------------- */
 @media screen and (min-width:1024px) {
-    .carrusel{
-        display: block;
-    }
-
-    .carousel-inner{
-        max-height: 20em;        
-    }
-
     h1{
         font-size: 2.5rem;
     }
@@ -419,6 +293,11 @@ figcaption{
         font-size: 2.5rem;
     }
 
+    h3{
+        font-size: 1.5rem;
+    }
+
+    /*-------------------------HEADER------------------------- */
     .header{
         padding-left: 7em;
         padding-right: 7em;
@@ -448,7 +327,7 @@ figcaption{
         transform: translateX(0%);
         transition: all 0ms ease;
     }
-    
+
     .nav{
         display: flex;
         flex-direction:row;
@@ -457,7 +336,7 @@ figcaption{
         padding-left: 0;
         transform: translateY(0%); /*Altura de los links con respecto al header*/
     }
-    
+
     .nav > a{
         text-decoration: none;
         font-family: Arial, Helvetica, sans-serif;
@@ -470,74 +349,7 @@ figcaption{
         text-decoration: underline;
     }
 
-    .p-tips{
-        margin: 0;
-        font-family: 'Poppins';
-        font-size: 1.4rem;
-    }
-
-    .testimonios{
-        justify-items: center;
-        gap:0;
-    }
-
-    .primera-imagen, .segunda-imagen{
-        width: 80%;
-    }
-
-    .primera-imagen > img{        
-        transform: scale(0.8);
-        filter: grayscale(80%); 
-        transition: 1s; 
-    }
-
-    .primera-imagen > img:hover{
-        transform: scale(1);
-        filter: grayscale(0%);
-        transition: 1s;
-    }
-
-    .segunda-imagen > img{
-        transform: scale(0.8);
-        filter: grayscale(80%); 
-        transition: 1s; 
-    }
-
-    .segunda-imagen > img:hover{
-        transform: scale(1);
-        filter: grayscale(0%);
-        transition: 1s;
-    }
-
-    .primera-imagen > p{
-        font-size: 1rem;
-    }
-
-    .segunda-imagen > p{
-        font-size: 1rem;
-    }
-
-    h3{
-        font-size: 1.5rem;
-    }
-
-    .primer-tramo, .segundo-tramo{
-        padding-left: 8em;
-        padding-right: 8em;        
-    }
-
-    .segundo-tramo{
-        align-items: center;
-    }
-
-    .segundo-tramo > h2{
-        margin-bottom: 2em;
-    }
-
-   .descubri{
-        width: 100%;
-    }
-
+    /*-------------------------FOOTER-------------------------------- */
     .footer{
         padding-left: 4em;
         padding-right: 4em;
@@ -547,7 +359,6 @@ figcaption{
         display: flex;
         gap: 30px;
         justify-content: space-evenly;
-        
     }
 
     .nosotros{
@@ -585,52 +396,25 @@ figcaption{
         transform: scale(0.56);
         transition: all 100ms;        
     }
-    
 }
 
-/*-----------PANTALLAS GRANDES HORIZONTALES---------------------------------------*/
-@media screen and (min-width:1140px) {
-    .carousel-inner{
-        max-height: 25em;        
-    }
-
-    .p-tips{
-        margin: 0;
-        font-family: 'Poppins';
-        font-size: 1.5rem;
-    }
-}
-
-/*-----------PANTALLAS MÁS GRANDES HORIZONTALES---------------------------------------*/
+/*----------------------RESPONSIVE EN 1400px--------------- */
 @media screen and (min-width:1400px) {
+    /*-------------------------HEADER------------------------- */
     .header{
         padding-left: 15em;
         padding-right: 15em;
-    }
-
-    .primer-tramo{
-        padding-left: 15em;
-        padding-right: 15em;
-    }   
-
-    .p-tips{
-        margin: 0;
-        font-family: 'Poppins';
-        font-size: 1.6rem;
-    }
-
-    .p-oculto{
-        font-size: 1.2rem;
-    }
-
-    .segundo-tramo{
-        padding-left: 15em;
-        padding-right: 15em;
-    }
+    }    
 }
 
-@media screen and (min-width:1900px){
-    .p-oculto{
-        font-size: 1.4rem;
-    }
+/*----------------------RESPONSIVE EN FULL HD--------------- */
+@media screen and (min-width:1900px) {
+    /*-------------------------HEADER------------------------- */
+    .header{
+        padding-left: 24em;
+        padding-right: 24em;
+    }    
 }
+
+
+

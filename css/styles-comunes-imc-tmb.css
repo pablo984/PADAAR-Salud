@@ -1,0 +1,136 @@
+
+p{
+    text-align: justify;
+}
+
+.explicacion, .explicacion-ilustrada, .calcular-imc{
+    padding: 1em;
+}
+
+.explicacion, .calcular-imc{
+    background-color:#eeeeee;
+    color:rgb(85, 85, 85);
+}
+
+.genero, .edad, .altura, .peso, .mostrar-resultado{
+    margin-top: 2em;
+    border-top: 1px solid #6C757D;
+    text-align: center;
+}
+
+.seleccion-genero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;    
+    align-items: end;
+    column-gap: 1em;
+}
+
+.icono-genero{
+    display: flex;
+    flex-direction: column;    
+}
+
+.boton-hombre, .boton-mujer{
+    font-family: 'Poppins';
+    font-weight: bold;
+    height: 3em;
+    border-radius: 5px;
+    outline-color: none;
+    margin-top: 1em;
+    margin-bottom:1em;
+    background-color: #6C757D;
+    padding: 0;
+    border:0 ;    
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.edad, .altura, .peso, .mostrar-resultado{
+    display: flex;
+    flex-direction: column;  
+    align-items: center;      
+}
+
+.caja-edad, .caja-altura, .caja-peso{
+    max-width: 30%;
+    padding: 0.5em;    
+    border-radius: 5px;
+    border:1px solid #a6b5c2;
+    font-family: 'Poppins';
+    font-size: 2rem;
+    text-align: center;   
+    outline-color:#0DCAF0; 
+}
+
+.caja-edad::placeholder{
+    font-size: 1rem;
+    text-align: center;
+}
+
+.caja-altura::placeholder{
+    font-size: 1rem;
+    text-align: center;
+}
+
+.caja-peso::placeholder{
+    font-size: 1rem;
+    text-align: center;
+}
+
+.caja-edad:valid{
+    outline-color: #00c257; 
+}
+
+.caja-altura:valid{
+    outline-color: #00c257; 
+}
+
+.caja-peso:valid{
+    outline-color: #00c257; 
+}
+
+.boton-calcular{
+    font-family: 'Poppins';
+    font-size: 1rem;
+    width: 300px;
+    font-weight: bold;
+    height: 3em;
+    border-radius: 5px;
+    outline-color: none;
+    border:none;
+    margin-top: 3em;
+    margin-bottom:1em ;
+    background-color: rgb(0, 179, 179);
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.boton-calcular:hover{
+    background-color: #12322B;
+}
+
+.resultado{
+    display: none;
+}
+
+.mostrar-resultado > h3{
+    color: #000000; 
+    font-weight: bold;
+    font-size: 1.5rem;    
+}
+
+.boton-reset{
+    font-family: 'Poppins';
+    font-size: 1rem;
+    width: 300px;    
+    font-weight: bold;
+    height: 3em;
+    border-radius: 5px;
+    outline-color: none;
+    border:none;
+    background-color: rgb(128, 0, 0);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
