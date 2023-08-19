@@ -1,11 +1,14 @@
-
-.calcular-tmb{
-    padding: 1em;
+figcaption{
+    text-align: center;
 }
 
 .calcular-tmb{
-    background-color:#eeeeee;
-    color:rgb(85, 85, 85);
+    display: flex;
+    flex-direction: column;
+}
+
+.calcular-tmb > h3{
+    text-align: center;
 }
 
 .caja-resultado{
@@ -31,6 +34,115 @@
     color:aqua;
     padding: 8px;
     border-radius: 5px;
+}
+
+/*-------------------------RESPONSIVE EN TABLETS VERTICALES--------------- */
+@media screen and (min-width:768px){
+    /*-------------------------MAIN------------------------------------- */
+    .explicacion{
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+
+    .explicacion-ilustrada{
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+
+    .calcular-tmb{
+        padding-left: 4em;
+        padding-right: 4em;
+    }    
+}
+
+
+/*----------------------RESPONSIVE EN 1400px--------------- */
+@media screen and (min-width:1400px) {
+    /*-------------------------MAIN------------------------------------- */
+    .explicacion{
+        padding-left: 15em;
+        padding-right: 15em;
+    }
+
+    .explicacion-ilustrada{
+        padding-left: 15em;
+        padding-right: 15em;
+    }
+
+    .calcular-tmb{
+        padding-left: 15em;
+        padding-right: 15em;
+    }    
+}
+
+
+/*----------------------RESPONSIVE EN FULL HD--------------- */
+@media screen and (min-width:1900px) {
+    /*-------------------------MAIN------------------------------------- */
+    .explicacion{
+        padding-left: 24em;
+        padding-right: 24em;
+    }
+
+    .explicacion-ilustrada{
+        padding-left: 24em;
+        padding-right: 24em;
+    }
+
+      
+    .calcular-tmb{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto 1fr 1fr auto;
+        gap:20px;
+        padding-left: 24em;
+        padding-right: 24em;
+    }
+    
+    .grid-calcular{
+        grid-column-start: 1;
+        grid-column-end: 3;        
+    }
+
+    .grid-datos{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .boton-calcular{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .resultado{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .sugerencias > p{
+        text-align: center;
+    }
+
+    .genero{
+        border:1px solid grey;
+        border-radius: 10px;
+        padding: 20px;        
+    }
+
+    .edad, .altura, .peso{
+        position:relative;
+        border:1px solid grey;
+        border-radius: 10px;
+        padding: 20px;
+
+    }
+
+    .caja-edad, .caja-altura, .caja-peso{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 

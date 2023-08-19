@@ -209,7 +209,7 @@ figcaption{
 /*-----------PANTALLAS GRANDES HORIZONTALES---------------------------------------*/
 @media screen and (min-width:1140px) {
     .carousel-inner{
-        max-height: 25em;        
+        max-height: 18em;        
     }
 
     .p-tips{

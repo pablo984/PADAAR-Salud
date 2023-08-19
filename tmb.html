@@ -21,7 +21,7 @@
     
     <body>
         <header class="header">            
-            <img src="./img/Logo padaar.png" alt="logo" width="70%" class="logo">            
+            <img src="./img/Logo padaar.png" alt="logo" class="logo">            
             <!--BOTON FIJO:-->            
             <div class="menu__barras">
                 <span class="linea1__menu-barras"></span>
@@ -37,7 +37,7 @@
                         <a href="#sobre-nosotros">Sobre nosotros</a>
                         <a href="imc.html">IMC</a>
                         <a href="tmb.html">TMB</a>
-                        <a href="#">Calorías</a>
+                        <a href="calorias.html">Calorías</a>
                     </nav>
                 </div>
             </div>
@@ -53,14 +53,14 @@
             
             <section class="explicacion-ilustrada">
                 <h2>Detalle gráfico de la TMB</h2>
-                <img src="./img/IMC.jpg" alt="tabla de IMC" width="100%">
-                <figcaption>Tabla de los parámetros de la TMB</figcaption>
+                <img src="./img/TMB.jpg" alt="tabla de TMB" width="100%">
+                <figcaption>Fórmulas para calcular la TMB</figcaption>
             </section>
 
             <section class="calcular-tmb">
-                <h2>Calcular TMB</h2>
-                <p>Para un cálculo correcto se necesitan los datos básicos sobre vos.
-                </p>
+                <h2 class="grid-calcular">Calcular TMB</h2>
+                <h3 class="grid-datos">Para un cálculo correcto se necesitan los datos básicos sobre vos.
+                </h3>
                 <div class="genero">
                     <h3>¿Cuál es tu género?</h3>
                     <div class="seleccion-genero">
@@ -86,8 +86,8 @@
                     <h3>¿Cuánto pesas?</h3>
                     <input type="number" id="idPeso" class="caja-peso" placeholder="Kg" required>
 
-                    <button class="boton-calcular">Calcular TMB</button>
                 </div>
+                <button class="boton-calcular">Calcular TMB</button>
                 <div class="resultado">
                     <div class="mostrar-resultado">
                         <h3>Tu TMB es de </h3>                  
@@ -150,6 +150,7 @@
 
         <!--Script Js para el control del menú:-->
         <script src="./js/script.js"></script>
+            
         <!--Script Js para el control interactivo de la TMB:-->
         <script src="./js/script-tmb.js"></script>
     </body>

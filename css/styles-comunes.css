@@ -35,7 +35,7 @@ body{
 }
 
 .logo{
-    min-width: 200px;
+    width: 200px;       
     z-index: 7;
 }
 
@@ -160,13 +160,21 @@ agregadas a las barras <span> mediante JavaScript: */
     font-weight:600;
 }
 
+.nosotros > p{
+    text-align: left;
+}
+
 .sugerencias > h3{
     /* font-family: 'Montserrat' !important; */
     font-size: 1.1rem;
     font-weight: 600;
 }
+
+.sugerencias > p{
+    text-align: left;
+}
+
 .contacto > h3{
-    /* font-family: 'Montserrat' !important; */
     font-size: 1.1rem;
     font-weight: 600;
     margin-top: 0.4em;
@@ -178,7 +186,6 @@ agregadas a las barras <span> mediante JavaScript: */
 
 .contactos > i{
     font-size: 1rem;
-    /* font-family: 'Montserrat'; */
     font-style: normal;  
 }
 
@@ -189,16 +196,18 @@ agregadas a las barras <span> mediante JavaScript: */
 }
 
 .mapa > h3{
-    /* font-family: 'Montserrat' !important; */
     font-size: 1.1rem;
     font-weight: 600;
 }
 
 .redes-sociales > h3{
-    /* font-family: 'Montserrat' !important; */
     font-size: 1.1rem;
     margin-top: 1em;
     font-weight: 600;
+}
+
+.iconos-redes{
+    text-align: center;
 }
 
 .iconos-redes > a > img{
@@ -217,7 +226,7 @@ agregadas a las barras <span> mediante JavaScript: */
 }
 
 /*-------------RESPONSIVE DE LOGO Y TIPS----------------------------------- */
-@media (min-width: 321px) and (max-width: 1920px) {
+@media (min-width: 320px) and (max-width: 1920px) {
     .logo{
         width: calc(200px + (300 - 200) * ((100vw - 320px) / (1920 - 320))); ;
     }
@@ -272,14 +281,15 @@ agregadas a las barras <span> mediante JavaScript: */
         display: grid;
         grid-template-columns: 23% 23% 33%;
         justify-content: space-between; 
+        align-items: baseline;
     }
 
     .redes-sociales{
-        margin-top: 1em;
-        margin-bottom: 2em;
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 1em;
+        margin-bottom: 2em;
     }
 }
 

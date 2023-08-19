@@ -6,7 +6,6 @@ const cajaAltura = document.querySelector(".caja-altura");
 const cajaPeso = document.querySelector(".caja-peso");
 const botonCalcularIMC = document.querySelector(".boton-calcular");
 const seccionResultado = document.querySelector(".resultado");
-// const cajaResultado = document.querySelector(".caja-resultado");
 const spanIMC = document.querySelector(".span-imc");
 const spanMensajeIMC = document.querySelector(".mensaje-imc");
 const mensajeFelicitaciones = document.querySelector(".mensaje-felicitaciones");
@@ -19,7 +18,6 @@ const mensajePesoIdealMujer = document.querySelector(".mensaje-peso-ideal-m");
 const spanPesoIdealHombre = document.querySelector(".span-peso-ideal-hombre");
 const spanPesoIdealMujer = document.querySelector(".span-peso-ideal-mujer");
 const botonReset = document.querySelector(".boton-reset");
-
 
 //Siluetas de hombres:
 const delgadezMuySeveraH = document.querySelector(".delgadez-muy-severa");
@@ -40,7 +38,6 @@ const sobrepesoM = document.querySelector(".sobrepeso-M");
 const obesidadModeradaM = document.querySelector(".obesidad-moderada-M");
 const obesidadSeveraM = document.querySelector(".obesidad-severa-M");
 const obesidadMorbidaM = document.querySelector(".obesidad-morbida-M");
-
 
 //Variables que almacenan la info del usuario:
 let sexo = "";
@@ -68,7 +65,7 @@ function cambiarColorHombre(){
 }
 
 function cambiarColorMujer(){
-    botonMujer.style.backgroundColor="rgb(255, 59, 92)"; //Rosa
+    botonMujer.style.backgroundColor="#FF3B5C"; //Rosa
     botonHombre.style.backgroundColor="#6C757D"; //Gris
     sexo = "Mujer"; //Agrega la info a la variable
 }
@@ -287,7 +284,6 @@ function calcularPesoIdeal(){
         mensajePesoIdealMujer.style.display = "block";
     }
 }
-
 
 function reiniciar(){
     location.reload();

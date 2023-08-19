@@ -3,11 +3,11 @@ p{
     text-align: justify;
 }
 
-.explicacion, .explicacion-ilustrada, .calcular-imc{
+.explicacion, .explicacion-ilustrada, .calcular-imc, .calcular-tmb{
     padding: 1em;
 }
 
-.explicacion, .calcular-imc{
+.explicacion, .calcular-imc, .calcular-tmb{
     background-color:#eeeeee;
     color:rgb(85, 85, 85);
 }
@@ -100,6 +100,8 @@ p{
     border:none;
     margin-top: 3em;
     margin-bottom:1em ;
+    margin-left: auto;
+    margin-right: auto;
     background-color: rgb(0, 179, 179);
     color: #FFFFFF;
     cursor: pointer;
@@ -133,4 +135,10 @@ p{
     cursor: pointer;
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+@media (min-width: 298px) and (max-width: 412px) {
+    .boton-calcular{
+        width: calc(200px + (300 - 200) * ((100vw - 320px) / (412 - 298))); ;
+    }
 }

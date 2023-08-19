@@ -9,7 +9,6 @@ const seccionResultado = document.querySelector(".resultado");
 const spanTMB = document.querySelector(".span-tmb");
 const botonReset = document.querySelector(".boton-reset");
 
-
 //Variables que almacenan la info del usuario:
 let sexoTMB = "";
 let edadTMB;
@@ -44,7 +43,7 @@ function cambiarColorHombre(){
 }
 
 function cambiarColorMujer(){
-    botonMujer.style.backgroundColor="rgb(255, 59, 92)"; //Rosa
+    botonMujer.style.backgroundColor="#FF3B5C"; //Rosa
     botonHombre.style.backgroundColor="#6C757D"; //Gris
     sexoTMB = "Mujer"; //Agrega la info a la variable
 }
@@ -101,3 +100,4 @@ function mostrarTMB(){
 function reiniciar(){
     location.reload();
 }
+
