@@ -61,4 +61,26 @@ De esa manera, el código primero calcula el IMC, luego recorta los decimales de
 resultado a sólo 1, y luego compara el resultado con los valores establecidos en 
 la función "mostrarIMC()".
 
+CENTRAR HORIZONTALMENTE UN CONTENEDOR HIJO DENTRO DE UN CONTENEDOR PADRE:
+* Hijo: 
+    margin left: auto;
+    margin right: auto;
+
+
+PROBLEMA CON SOLUCIÓN 4:
+* Cuando en el estilizaba la clase "calcular-imc" de la "section" del archivo
+  "imc.html" con "display:flex;", "flex-direction:column;" y "align-items:center;"
+  tenía un PROBLEMA con el div con clase "peso", el cual su input se achicaba. Esto
+  se debía a que "calcular-imc" tenía "align-items:center", lo que hace que sus 
+  hijos se centren en el plano horizontal (ya que el flex-direction está en colum), 
+  y como su hijo con clase "peso" también tenía "display:flex" con "flex-direction:column" 
+  y "align-items:center" hacía que su contenido se ajuste al centro horizontal. 
+  Y lo que pasaba, era que el hijo (peso) al centarse en el centro horizontal de 
+  su padre, se le achicaba su tamaño y, por ende, también achicaba el tamaño del 
+  input que tenía dentro. 
+  Cuando al padre "calcular-imc" le quité la propiedad "align-items:center", el hijo
+  pasó a tener el mismo ancho que su padre y por consiguiente, el div ahora estaba 
+  más grande. Y esa fue la solución para que no se achique tanto el input interno.
+  
+
 
