@@ -83,4 +83,31 @@ PROBLEMA CON SOLUCIÓN 4:
   más grande. Y esa fue la solución para que no se achique tanto el input interno.
   
 
+PROBLEMA CON SOLUCIÓN 5:
+* Cuando quería establecer un ancho a un elemento en determinada resolución de pantalla, 
+  antes me fijaba en el inspector cuánto medía de ancho dicho contenedor a esa resolución, 
+  entonces anotaba el número y lo otorgaba. Por ejemplo:  
+  
+  A 768px un contenedor medía 622.797px de ancho y me anotaba ese número para colocarlo en
+  el "@media". Pero el PROBLEMA estaba en que cuando se llegaba a esa resolución, a pesar de
+  haber configurado el "width:622.797px" me decía que media "width:592.797px". 
+  
+  Lo que no tomaba en cuenta era el "padding" que tenía a los laterales, el cual era de 
+  15px x lado. Hice la cuenta de restar 622.797 - 15 - 15 = 592.797 y ahí me di cuenta que no le 
+  estaba sumando el padding left y right que le había puesto. 
+  Ahora, al número 622.797 le sumé los 30px de padding (15 x lado) dándome un resultado de
+  652.797. Ahora funciona perfecto: cuando el ancho de la pantalla llega a 768px, el ancho que 
+  toma el contenedor queda fijo en 622.797px. 
+
+
+PROBLEMA CON SOLUCIÓN 6:
+* La función "focus()" sólo funciona en botones y campos de entrada (como "input"). No funciona
+  en etiquetas como h1, h2, p, etc.   
+  Para que el "focus()" funcione en etiquetas, a la etiqueta que le quiero hacer foco le tengo
+  que poner el atributo tabindex="0". El número "0" se utiliza para especificar el orden en el que 
+  los elementos reciben el foco cuando se navega mediante la tecla TAB en una página web.
+  Un valor positivo (por ejemplo, tabindex="1") establece el orden de foco en función de su valor. 
+  Los elementos con valores de tabindex más bajos obtienen el foco primero. 
+  Como en mi caso quería enfocar un resultado que estaba oculto, lo puse en "0" porque dicho 
+  resultado sólo aparece al presionar el botón "Calcular" y luego, al presionar "Reset" desaparece.
 

@@ -46,7 +46,7 @@ let altura;
 let peso;
 let resultadoIMC;
 
-/*Eventos al hacer click: */
+//Eventos al hacer click: 
 botonHombre.addEventListener("click", cambiarColorHombre);
 botonMujer.addEventListener("click", cambiarColorMujer);
 botonCalcularIMC.addEventListener("click", calcular);
@@ -84,6 +84,7 @@ function cargarDatos(){
 function chequearIngresosYCalcular(){
     if(sexo == ""){
         alert("Tenés que seleccionar tu género");
+        botonHombre.focus();
     }
     else if (edad == ""){
         alert("Tenés que ingresar tu edad");
@@ -120,64 +121,56 @@ function mostrarIMC(){
         spanMensajeIMC.innerHTML = "Delgadez muy severa"
         spanMensajeIMC.style.backgroundColor = "#9ECBF7";
         delgadezMuySeveraH.style.display = "block";
-        mostrarResultado();
-        botonCalcularIMC.disabled = true;
+        mostrarResultado();        
     }
     else if((resultadoIMC > 15 && resultadoIMC <= 15.9) && (sexo == "Hombre")){
         spanMensajeIMC.style.color = "#00bbff";
         spanMensajeIMC.innerHTML = "Delgadez severa";
         spanMensajeIMC.style.backgroundColor = "#FFBB00";
         delgadezSeveraH.style.display = "block";
-        mostrarResultado();
-        botonCalcularIMC.disabled = true;
+        mostrarResultado();        
     }
     else if((resultadoIMC >= 16 && resultadoIMC <= 18.4) && (sexo == "Hombre")){
         spanMensajeIMC.style.color = "#00ffff";
         spanMensajeIMC.innerHTML = "Delgadez";
         spanMensajeIMC.style.backgroundColor = "black";
         delgadezH.style.display = "block";
-        mostrarResultado();
-        botonCalcularIMC.disabled = true;
+        mostrarResultado();        
     }
     else if((resultadoIMC >= 18.5 && resultadoIMC <= 24.9) && (sexo == "Hombre")){
         spanMensajeIMC.style.color = "#00ff01";
         spanMensajeIMC.innerHTML = "Peso saludable";
         spanMensajeIMC.style.backgroundColor = "#FF00FF";
         saludableH.style.display = "block";
-        mostrarResultado();        
-        botonCalcularIMC.disabled = true;
+        mostrarResultado();
     }
     else if((resultadoIMC >= 25 && resultadoIMC <= 29.9) && (sexo == "Hombre")){
         spanMensajeIMC.style.color = "#ffff00";
         spanMensajeIMC.innerHTML = "Sobrepeso";
         spanMensajeIMC.style.backgroundColor = "black";
         sobrepesoH.style.display = "block";
-        mostrarResultado();
-        botonCalcularIMC.disabled = true;
+        mostrarResultado();        
     }
     else if((resultadoIMC >= 30 && resultadoIMC <= 34.9) && (sexo == "Hombre")){
         spanMensajeIMC.style.color = "#ffbe00";
         spanMensajeIMC.innerHTML = "Obesidad moderada";
         spanMensajeIMC.style.backgroundColor = "#3C4D5E";
         obesidadModeradaH.style.display ="block";
-        mostrarResultado();
-        botonCalcularIMC.disabled = true;
+        mostrarResultado();        
     }
     else if((resultadoIMC >= 35 && resultadoIMC <= 39.9) && (sexo == "Hombre")){
         spanMensajeIMC.style.color = "#ff7300";
         spanMensajeIMC.innerHTML = "Obesidad severa!"
         spanMensajeIMC.style.backgroundColor = "#0000ff";
         obesidadSeveraH.style.display = "block";
-        mostrarResultado();
-        botonCalcularIMC.disabled = true;
+        mostrarResultado();        
     }
     else if (resultadoIMC > 39.9 && sexo == "Hombre"){
         spanMensajeIMC.style.color = "#fe0000";
         spanMensajeIMC.innerHTML = "Obesidad mórbida!";
         spanMensajeIMC.style.backgroundColor = "#00fe00";
         obesidadMorbidaH.style.display = "block";
-        mostrarResultado();
-        botonCalcularIMC.disabled = true;
+        mostrarResultado();        
     }
     //Mujeres:
     else if((resultadoIMC <= 15) && (sexo == "Mujer")){
@@ -185,70 +178,68 @@ function mostrarIMC(){
         spanMensajeIMC.innerHTML = "Delgadez muy severa"
         spanMensajeIMC.style.backgroundColor = "#9ECBF7";
         delgadezMuySeveraM.style.display = "block";
-        mostrarResultado();
-        botonCalcularIMC.disabled = true;
+        mostrarResultado();        
     }
     else if((resultadoIMC > 15 && resultadoIMC <= 15.9) && (sexo == "Mujer")){
         spanMensajeIMC.style.color = "#00bbff";
         spanMensajeIMC.innerHTML = "Delgadez severa";
         spanMensajeIMC.style.backgroundColor = "#FFBB00";
         delgadezSeveraM.style.display = "block";
-        mostrarResultado();
-        botonCalcularIMC.disabled = true;
+        mostrarResultado();        
     }
     else if((resultadoIMC >= 16 && resultadoIMC <= 18.4) && (sexo == "Mujer")){
         spanMensajeIMC.style.color = "#00ffff";
         spanMensajeIMC.innerHTML = "Delgadez";
         spanMensajeIMC.style.backgroundColor = "black";
         delgadezM.style.display = "block";
-        mostrarResultado();
-        botonCalcularIMC.disabled = true;
+        mostrarResultado();        
     }
     else if((resultadoIMC >= 18.5 && resultadoIMC <= 24.9) && (sexo == "Mujer")){
         spanMensajeIMC.style.color = "#00ff01";
         spanMensajeIMC.innerHTML = "Peso saludable";
         spanMensajeIMC.style.backgroundColor = "#FF00FF";
         saludableM.style.display = "block";
-        mostrarResultado();
-        botonCalcularIMC.disabled = true;
+        mostrarResultado();        
     }
     else if((resultadoIMC >= 25 && resultadoIMC <= 29.9) && (sexo == "Mujer")){
         spanMensajeIMC.style.color = "#ffff00";
         spanMensajeIMC.innerHTML = "Sobrepeso";
         spanMensajeIMC.style.backgroundColor = "black";
         sobrepesoM.style.display = "block";
-        mostrarResultado();
-        botonCalcularIMC.disabled = true;
+        mostrarResultado();        
     }
     else if((resultadoIMC >= 30 && resultadoIMC <= 34.9) && (sexo == "Mujer")){
         spanMensajeIMC.style.color = "#ffbe00";
         spanMensajeIMC.innerHTML = "Obesidad moderada";
         spanMensajeIMC.style.backgroundColor = "#3C4D5E";
         obesidadModeradaM.style.display ="block";
-        mostrarResultado();
-        botonCalcularIMC.disabled = true;
+        mostrarResultado();        
     }
     else if((resultadoIMC >= 35 && resultadoIMC <= 39.9) && (sexo == "Mujer")){
         spanMensajeIMC.style.color = "#ff7300";
         spanMensajeIMC.innerHTML = "Obesidad severa!"
         spanMensajeIMC.style.backgroundColor = "#0000ff";
         obesidadSeveraM.style.display = "block";
-        mostrarResultado();
-        botonCalcularIMC.disabled = true;
+        mostrarResultado();        
     }
     else if (resultadoIMC > 39.9 && sexo == "Mujer"){
         spanMensajeIMC.style.color = "#fe0000";
         spanMensajeIMC.innerHTML = "Obesidad mórbida!";
         spanMensajeIMC.style.backgroundColor = "#00fe00";
         obesidadMorbidaM.style.display = "block";
-        mostrarResultado();
-        botonCalcularIMC.disabled = true;
+        mostrarResultado();        
     }    
 }
 
 function mostrarResultado(){
     spanIMC.innerHTML = resultadoIMC;
     seccionResultado.style.display = "block";
+    botonCalcularIMC.disabled = true;
+    setTimeout(enfocarResultado, 100); 
+}
+
+function enfocarResultado(){
+    spanIMC.focus();
 }
 
 function calcularPesoMinimoYMaximo(){

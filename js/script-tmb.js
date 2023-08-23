@@ -8,6 +8,7 @@ const botonCalcularTMB = document.querySelector(".boton-calcular");
 const seccionResultado = document.querySelector(".resultado");
 const spanTMB = document.querySelector(".span-tmb");
 const botonReset = document.querySelector(".boton-reset");
+const seccionCalcularTMB = document.querySelector(".calcular-tmb");
 
 //Variables que almacenan la info del usuario:
 let sexoTMB = "";
@@ -24,7 +25,7 @@ let puntosYComasDecimales = Intl.NumberFormat("de-DE", {
     maximumFractionDigits: 2,
 });
 
-/*Eventos al hacer click: */
+//Eventos al hacer click: 
 botonHombre.addEventListener("click", cambiarColorHombre);
 botonMujer.addEventListener("click", cambiarColorMujer);
 botonCalcularTMB.addEventListener("click", calcular);
@@ -62,6 +63,7 @@ function cargarDatos(){
 function chequearIngresosYCalcular(){
     if(sexoTMB == ""){
         alert("Tenés que seleccionar tu género");
+        botonHombre.focus();
     }
     else if(edadTMB == ""){
         alert("Tenés que ingresar tu edad");
@@ -94,10 +96,19 @@ function realizarCalculos(){
 function mostrarTMB(){
     spanTMB.innerHTML = puntosYComasDecimales.format(resultadoTMB);    
     seccionResultado.style.display = "block";   
-    botonCalcularTMB.disabled = true;     
+    botonCalcularTMB.disabled = true;   
+    /*Los 100 representan los ms que tarda en enfocar al botón reset, ya que si
+    se está usando un dispositivo móvil, primero se tiene que ir el teclado virtual
+    y luego esperar 100ms y hacer foco en el botón reset: */
+    setTimeout(enfocarBotonReset, 100); 
+}
+
+function enfocarBotonReset(){
+    botonReset.focus();
 }
 
 function reiniciar(){
-    location.reload();
+    location.reload();    
 }
+
 
